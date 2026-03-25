@@ -36,65 +36,133 @@
     .shell { max-width: 1360px; margin: 0 auto; padding: 18px; padding-bottom: 32px; }
     .hero {
       background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(30,64,175,0.93));
-      color: white; border-radius: 28px; box-shadow: var(--shadow); padding: 20px;
-      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;
+      color: white;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
     }
     .hero h1 { margin: 0 0 6px; font-size: 2rem; letter-spacing: -0.02em; }
     .hero p { margin: 0; color: rgba(255,255,255,0.82); max-width: 820px; line-height: 1.45; }
     .hero-actions, .actions, .list-actions { display: flex; gap: 8px; flex-wrap: wrap; }
     .layout { display: grid; grid-template-columns: 430px minmax(0, 1fr); gap: 18px; align-items: start; }
     .card {
-      background: var(--surface); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.6);
-      box-shadow: var(--shadow); border-radius: var(--radius); padding: 16px;
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.6);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 16px;
     }
     h2 { margin: 0 0 12px; font-size: 1.05rem; letter-spacing: -0.01em; }
     label { display: block; font-size: 0.87rem; font-weight: 700; margin-bottom: 6px; }
     input, select, textarea, button { font: inherit; }
     input, select, textarea {
-      width: 100%; border: 1px solid var(--border); border-radius: 14px; padding: 11px 12px;
-      background: rgba(255,255,255,0.92); color: var(--text);
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 11px 12px;
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
     }
     textarea { min-height: 96px; resize: vertical; }
-    button { border: 0; border-radius: 14px; padding: 10px 14px; font-weight: 700; cursor: pointer; background: var(--accent); color: white; }
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--accent);
+      color: white;
+    }
     button.secondary { background: rgba(255,255,255,0.9); color: var(--text); border: 1px solid var(--border); }
     button.ghost { background: var(--accent-soft); color: #1e3a8a; }
     button.success { background: var(--success); }
     button.danger { background: var(--danger); }
     .row, .row-3 { display: grid; gap: 10px; margin-bottom: 10px; }
     .row { grid-template-columns: 1fr 1fr; }
-    .row-3 { grid-template-columns: repeat(3,1fr); }
+    .row-3 { grid-template-columns: repeat(3, 1fr); }
     .stack { margin-bottom: 10px; }
-    .tour-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; margin-bottom: 10px; }
+    .tour-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 10px; }
     .chip {
-      display: flex; align-items: center; gap: 8px; padding: 10px; border-radius: 16px;
-      border: 1px solid var(--border); background: rgba(255,255,255,0.76); min-height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.76);
+      min-height: 52px;
     }
     .tour-block {
-      background: rgba(255,255,255,0.8); border: 1px solid var(--border); border-radius: 18px;
-      padding: 12px; margin-top: 10px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 12px;
+      margin-top: 10px;
     }
     .notice {
-      background: #eff6ff; color: #1e3a8a; border: 1px solid #bfdbfe; border-radius: 18px;
-      padding: 12px 14px; margin-bottom: 16px; line-height: 1.45; font-size: 0.9rem;
+      background: #eff6ff;
+      color: #1e3a8a;
+      border: 1px solid #bfdbfe;
+      border-radius: 18px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      line-height: 1.45;
+      font-size: 0.9rem;
     }
     .template {
-      background: #0f172a; color: #e5eefb; border-radius: 18px; padding: 12px; white-space: pre-wrap;
-      line-height: 1.45; min-height: 360px; overflow: auto; font-size: 0.9rem;
+      background: #0f172a;
+      color: #e5eefb;
+      border-radius: 18px;
+      padding: 12px;
+      line-height: 1.5;
+      min-height: 360px;
+      overflow: auto;
+      font-size: 0.9rem;
     }
+    .template p { margin: 0 0 1em; }
+    .template ul { margin: 0.35em 0 1em 1.2em; padding-left: 1.1em; }
+    .template li { margin: 0.25em 0; }
+    .template strong { color: #ffffff; }
     .searchbar { margin-bottom: 12px; }
     .list { display: grid; gap: 10px; }
     .item {
-      background: rgba(255,255,255,0.85); border: 1px solid var(--border); border-radius: 20px; padding: 14px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px;
     }
     .item-top {
-      display: flex; justify-content: space-between; align-items: start; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
     }
     .item-grid {
-      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px 14px; font-size: 0.84rem; line-height: 1.45; margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 14px;
+      font-size: 0.84rem;
+      line-height: 1.45;
+      margin-bottom: 10px;
     }
     .tag {
-      display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 999px;
-      background: rgba(255,255,255,0.85); border: 1px solid var(--border); font-size: 0.78rem; font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-weight: 700;
     }
     .subtle { color: var(--muted); font-size: 0.84rem; line-height: 1.45; }
     .small { font-size: 0.82rem; }
@@ -155,19 +223,19 @@
               <input id="partySize" type="number" min="1" placeholder="10" />
             </div>
             <div>
-              <label for="staffName">Your name</label>
-              <input id="staffName" placeholder="Tour coordinator / staffer" />
+              <label for="signoffName">Coordinator / sign-off name</label>
+              <input id="signoffName" placeholder="Tour coordinator / staffer" />
             </div>
           </div>
 
           <div class="row">
             <div>
-              <label for="coordinatorName">Coordinator sign-off</label>
-              <input id="coordinatorName" placeholder="Tour coordinator name" />
-            </div>
-            <div>
               <label for="officeLine">Office phone</label>
               <input id="officeLine" value="(202) 225-4540" />
+            </div>
+            <div>
+              <label>&nbsp;</label>
+              <input value="" disabled style="visibility:hidden;" />
             </div>
           </div>
 
@@ -288,45 +356,45 @@
 
     const STATUS_TEMPLATES = {
       'White House Tour': {
-        'Please RSVP': group => `White House - I have submitted a White House tour request for ${formatDay(group)} at ${formatTime(group)} on your behalf. You should have received an email from the White House prompting you to submit information for each person in your group to White House security. This information must exactly match information on your government-issued ID and must be submitted within three days after you receive the email. You will receive confirmation or denial of your tour 14-21 days before the requested date. If you do not RSVP by the deadline, [DATE AND TIME IN PT IN WHITE HOUSE WEBSITE] you will not be able to get the tour. Your reservation link is below:\nINSERT RESERVATION LINK\nPlease also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.`,
-        'Confirmation': group => `White House - The White House has scheduled your group for ${formatDay(group)} at ${formatTime(group)}. You should have already received a confirmation email with your pass directly from the White House.\nDay-of instructions: All visitors over the age of 18 and all non-US citizens regardless of age must bring a REAL ID or valid passport. Please check your receipt for further instructions.`,
-        'Pending': () => `White House – We have received your request and will reserve your tour as soon as the White House opens up the dates you’ve requested for reservations.`,
-        'No Availability': () => `White House – Unfortunately, the White House has no available tour spots during the dates you provided. Please let us know if there are any other tour requests we can submit for you!`,
-        'Member Pass': group => `White House – We are happy to let you know that we’re using one of our limited member passes for your visit. Pending the submission of your RSVPs, the White House has scheduled your group for ${formatDay(group)} at 8:00 AM.\nDay-of instructions:\nAll confirmed groups must have a “Member Pass” at hand that will be distributed from this office. Groups without this pass will be turned away.\nPlease arrange to pick up the Member Pass with the tour coordinator before your tour begins or stop by our office at 209 Cannon Office Building between the hours of 10am to 4pm prior to the tour date.\nPlease also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.`,
-        'Cancelled Reservation': () => `White House - Unfortunately, the White House did not receive an RSVP from each individual prior to the deadline, which has led to the cancellation of your tour request. Please let us know if you would like us to resubmit for a White House tour [PLEASE CHECK THAT THEY ARE STILL AVAILABLE BEFORE OFFERING TO RESUBMIT] or if there are any additional tour requests we can submit for you!`
+        'Please RSVP': tour => `I have submitted a White House tour request for ${formatDay(tour)} at ${formatTime(tour)} on your behalf. You should have received an email from the White House prompting you to submit information for each person in your group to White House security. This information must exactly match information on your government-issued ID and must be submitted within three days after you receive the email. You will receive confirmation or denial of your tour 14-21 days before the requested date. If you do not RSVP by the deadline, [DATE AND TIME IN PT IN WHITE HOUSE WEBSITE] you will not be able to get the tour. Your reservation link is below:\nINSERT RESERVATION LINK\nPlease also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.`,
+        'Confirmation': tour => `The White House has scheduled your group for ${formatDay(tour)} at ${formatTime(tour)}. You should have already received a confirmation email with your pass directly from the White House.\nDay-of instructions: All visitors over the age of 18 and all non-US citizens regardless of age must bring a REAL ID or valid passport. Please check your receipt for further instructions.`,
+        'Pending': () => `We have received your request and will reserve your tour as soon as the White House opens up the dates you’ve requested for reservations.`,
+        'No Availability': () => `Unfortunately, the White House has no available tour spots during the dates you provided. Please let us know if there are any other tour requests we can submit for you!`,
+        'Member Pass': tour => `We are happy to let you know that we’re using one of our limited member passes for your visit. Pending the submission of your RSVPs, the White House has scheduled your group for ${formatDay(tour)} at 8:00 AM.\nDay-of instructions:\nAll confirmed groups must have a “Member Pass” at hand that will be distributed from this office. Groups without this pass will be turned away.\nPlease arrange to pick up the Member Pass with the tour coordinator before your tour begins or stop by our office at 209 Cannon Office Building between the hours of 10am to 4pm prior to the tour date.\nPlease also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.`,
+        'Cancelled Reservation': () => `Unfortunately, the White House did not receive an RSVP from each individual prior to the deadline, which has led to the cancellation of your tour request. Please let us know if you would like us to resubmit for a White House tour [PLEASE CHECK THAT THEY ARE STILL AVAILABLE BEFORE OFFERING TO RESUBMIT] or if there are any additional tour requests we can submit for you!`
       },
       'Capitol Tour': {
-        'Confirmation': group => `U.S. Capitol Building - You should have already received a confirmation email directly from the Capitol Visitor Center for a tour on ${formatDay(group)} at ${formatTime(group)}. Your receipt is attached here.\nDay-of instructions: Enter for your tour in the Capitol Visitors Center, found beneath the east plaza of the Capitol. Make sure to have the confirmation number on your email receipt handy, and allow at least 30 minutes for going through security. Outside food and beverages (including water) are not allowed inside the Capitol Visitors Center.`,
-        'Staff-Led Confirmation': group => `U.S. Capitol Building - I am happy to say that we have scheduled a staff-led tour for you and your group on ${formatDay(group)} at ${formatTime(group)}.\nDay-of instructions: Please meet your tour guide(s) at Cannon 209, Congressman Josh Harder’s office. Allow at least 30 minutes for going through security. Please note that outside food and beverages (including water) are not allowed inside the Capitol Visitors Center. Feel free to drop off any food or beverages you would not like to discard in Cannon 209.`,
-        'No Availability': () => `U.S. Capitol Building - The Capitol Visitor Center was fully booked for advanced passes during your visit. There are a limited number of same day walk-up tickets, and we strongly advise that you arrive early and be prepared to wait if you would like to pursue that option. Please let us know if there are any other tour requests we can submit for you!`
+        'Confirmation': tour => `You should have already received a confirmation email directly from the Capitol Visitor Center for a tour on ${formatDay(tour)} at ${formatTime(tour)}. Your receipt is attached here.\nDay-of instructions: Enter for your tour in the Capitol Visitors Center, found beneath the east plaza of the Capitol. Make sure to have the confirmation number on your email receipt handy, and allow at least 30 minutes for going through security. Outside food and beverages (including water) are not allowed inside the Capitol Visitors Center.`,
+        'Staff-Led Confirmation': tour => `I am happy to say that we have scheduled a staff-led tour for you and your group on ${formatDay(tour)} at ${formatTime(tour)}.\nDay-of instructions: Please meet your tour guide(s) at Cannon 209, Congressman Josh Harder’s office. Allow at least 30 minutes for going through security. Please note that outside food and beverages (including water) are not allowed inside the Capitol Visitors Center. Feel free to drop off any food or beverages you would not like to discard in Cannon 209.`,
+        'No Availability': () => `The Capitol Visitor Center was fully booked for advanced passes during your visit. There are a limited number of same day walk-up tickets, and we strongly advise that you arrive early and be prepared to wait if you would like to pursue that option. Please let us know if there are any other tour requests we can submit for you!`
       },
       'Library of Congress Tour': {
-        'Confirmation': group => `Library of Congress - You should have already received a confirmation email directly from the Library of Congress for a timed entry pass on ${formatDay(group)} at ${formatTime(group)}.\nDay-of instructions: Make sure to have the confirmation number on your email receipt handy, and allow at least 15 minutes for going through security.`,
-        'Pending': () => `Library of Congress – We have received your request and will reserve your timed entry pass as soon as the Library opens up the dates you’ve requested for reservations.`,
-        'No Availability': () => `Library of Congress - Unfortunately there are no more reserved spaces available during the days and times you requested. Walk-in timed entry passes of the Library of Congress are available on a first-come, first-served basis without prior reservations; you can find more information about walk-ins on their website.`
+        'Confirmation': tour => `You should have already received a confirmation email directly from the Library of Congress for a timed entry pass on ${formatDay(tour)} at ${formatTime(tour)}.\nDay-of instructions: Make sure to have the confirmation number on your email receipt handy, and allow at least 15 minutes for going through security.`,
+        'Pending': () => `We have received your request and will reserve your timed entry pass as soon as the Library opens up the dates you’ve requested for reservations.`,
+        'No Availability': () => `Unfortunately there are no more reserved spaces available during the days and times you requested. Walk-in timed entry passes of the Library of Congress are available on a first-come, first-served basis without prior reservations; you can find more information about walk-ins on their website.`
       },
       'SCOTUS Tour': {
-        'Confirmation': group => `Supreme Court Lecture - I am happy to say that we have scheduled reserved seating for your group on ${formatDay(group)} at 12:30 pm. The reservation will be under your name.\nDay-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 15 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.`,
-        'No Availability': () => `Supreme Court Lecture - Unfortunately the Supreme Court had no availability for reserved lecture seating for the dates you provided. Please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.\nDay-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 30 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.`,
-        'No Reserved Seating': () => `Supreme Court Lecture - Unfortunately the Supreme Court is not offering reserved seating available on the days you will be in Washington. However, they may still be holding lectures on a walk-in basis only. Please visit the Supreme Court website to see their calendar and anticipated tour slots.`,
-        'Pending': () => `Supreme Court Lecture – We have received your request and will reserve your tour as soon as the Supreme Court opens up the dates you’ve requested for reservations.`,
-        'Group Larger Than 6': () => `Supreme Court Lecture - Unfortunately the Supreme Court does not allow reserved seating for groups of more than 6. They do allow large groups to walk-in to attend lectures, please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.`
+        'Confirmation': tour => `I am happy to say that we have scheduled reserved seating for your group on ${formatDay(tour)} at 12:30 pm. The reservation will be under your name.\nDay-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 15 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.`,
+        'No Availability': () => `Unfortunately the Supreme Court had no availability for reserved lecture seating for the dates you provided. Please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.\nDay-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 30 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.`,
+        'No Reserved Seating': () => `Unfortunately the Supreme Court is not offering reserved seating available on the days you will be in Washington. However, they may still be holding lectures on a walk-in basis only. Please visit the Supreme Court website to see their calendar and anticipated tour slots.`,
+        'Pending': () => `We have received your request and will reserve your tour as soon as the Supreme Court opens up the dates you’ve requested for reservations.`,
+        'Group Larger Than 6': () => `Unfortunately the Supreme Court does not allow reserved seating for groups of more than 6. They do allow large groups to walk-in to attend lectures, please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.`
       },
       'BEP Tour': {
-        'Requested': () => `Bureau of Engraving and Printing (BEP) – We have submitted your tour request to the BEP! We’ll update you as soon as we hear back from the BEP.`,
-        'Confirmation': group => `Bureau of Engraving and Printing (BEP) - The BEP has scheduled your group for ${formatDay(group)} at ${formatTime(group)}.\nDay-of instructions: Make sure to have the confirmation number on your email receipt handy, and make sure to arrive early - the BEP does not accommodate groups that are more than 10 minutes late. The Tour and Visitor Center is near the National Mall, just south of Independence Avenue, SW, between 14th Street and Raoul Wallenberg Place (15th Street) in Washington, D.C. Visitors enter through the Tour and Visitor Center entrance on 14th Street.`,
-        'Group of 10 or More': () => `Bureau of Engraving and Printing - The Bureau of Engraving and Printings does not allow congressional staff to book tours for constituent groups of 10 or more, but it does allow constituents to do so themselves. Please see the attached form, complete it, and email the completed form to tourscheduler@bep.gov. Please note that the BEP also allows walk-in tours Monday through Friday. You can find more information on their website.`,
-        'Pending': () => `Bureau of Engraving and Printing – We have received your request and will reserve your tour as soon as the Bureau of Engraving and Printing opens the dates you’ve requested for reservations.`,
-        'No Availability': () => `Bureau of Engraving and Printing (BEP) – Unfortunately, the Bureau of Engraving and Printing has no spaces available for your requested dates and times. The BEP allows walk-in tours Monday through Friday. You can find more information on their website.`
+        'Requested': () => `We have submitted your tour request to the BEP! We’ll update you as soon as we hear back from the BEP.`,
+        'Confirmation': tour => `The BEP has scheduled your group for ${formatDay(tour)} at ${formatTime(tour)}.\nDay-of instructions: Make sure to have the confirmation number on your email receipt handy, and make sure to arrive early - the BEP does not accommodate groups that are more than 10 minutes late. The Tour and Visitor Center is near the National Mall, just south of Independence Avenue, SW, between 14th Street and Raoul Wallenberg Place (15th Street) in Washington, D.C. Visitors enter through the Tour and Visitor Center entrance on 14th Street.`,
+        'Group of 10 or More': () => `The Bureau of Engraving and Printings does not allow congressional staff to book tours for constituent groups of 10 or more, but it does allow constituents to do so themselves. Please see the attached form, complete it, and email the completed form to tourscheduler@bep.gov. Please note that the BEP also allows walk-in tours Monday through Friday. You can find more information on their website.`,
+        'Pending': () => `We have received your request and will reserve your tour as soon as the Bureau of Engraving and Printing opens the dates you’ve requested for reservations.`,
+        'No Availability': () => `Unfortunately, the Bureau of Engraving and Printing has no spaces available for your requested dates and times. The BEP allows walk-in tours Monday through Friday. You can find more information on their website.`
       },
       'FBI Tour': {
-        'Need Information': () => `FBI – Due to FBI security, we are unable to request a tour if we do not have the information listed below for each member of your party. As of [TODAY’S DATE], the FBI has the dates you’ve requested open for reservations, but FBI tours are very limited and fill up quickly.\nTo ensure that we are able to submit your request, please collect the following information from each member of your group.\nFirst Name\nMiddle Name\nLast Name\nSuffix (If Applicable)\nBirthdate\nSocial Security Number (not required for guests under 16 years of age)\nCountry of Birth\nCitizenship\nGreen Card Number (If Applicable)\nPassport or Visa (If Applicable)\nOnce you have collected this information from all members of your party, call our main office line at (202)225-4540 and ask to book an FBI tour.`,
-        'Tour Submitted': group => `FBI – Your tour for the FBI has been requested for ${formatDay(group)} at ${formatTime(group)}. You will receive email from the FBI stating whether your group has been approved for the tour at least three weeks prior to your scheduled visit.`,
-        'No Availability': () => `FBI - Unfortunately the FBI has no more available tour spots during your trip to DC. If there’s anything else we can do to make your trip to Washington great, please let us know!`
+        'Need Information': () => `Due to FBI security, we are unable to request a tour if we do not have the information listed below for each member of your party. As of [TODAY’S DATE], the FBI has the dates you’ve requested open for reservations, but FBI tours are very limited and fill up quickly.\nTo ensure that we are able to submit your request, please collect the following information from each member of your group.\nFirst Name\nMiddle Name\nLast Name\nSuffix (If Applicable)\nBirthdate\nSocial Security Number (not required for guests under 16 years of age)\nCountry of Birth\nCitizenship\nGreen Card Number (If Applicable)\nPassport or Visa (If Applicable)\nOnce you have collected this information from all members of your party, call our main office line at (202)225-4540 and ask to book an FBI tour.`,
+        'Tour Submitted': tour => `Your tour for the FBI has been requested for ${formatDay(tour)} at ${formatTime(tour)}. You will receive email from the FBI stating whether your group has been approved for the tour at least three weeks prior to your scheduled visit.`,
+        'No Availability': () => `Unfortunately the FBI has no more available tour spots during your trip to DC. If there’s anything else we can do to make your trip to Washington great, please let us know!`
       }
     };
 
-    const STORAGE_KEY = 'tourEmailGeneratorV1';
+    const STORAGE_KEY = 'tourEmailGeneratorV2';
     let deferredPrompt = null;
 
     const state = {
@@ -341,8 +409,7 @@
       contactName: document.getElementById('contactName'),
       contactEmail: document.getElementById('contactEmail'),
       partySize: document.getElementById('partySize'),
-      staffName: document.getElementById('staffName'),
-      coordinatorName: document.getElementById('coordinatorName'),
+      signoffName: document.getElementById('signoffName'),
       officeLine: document.getElementById('officeLine'),
       groupNotes: document.getElementById('groupNotes'),
       tourSelector: document.getElementById('tourSelector'),
@@ -381,10 +448,16 @@
     function wire() {
       els.saveBtn.addEventListener('click', saveGroup);
       els.generateBtn.addEventListener('click', generateEmail);
-      els.copyBtn.addEventListener('click', () => copyText(els.emailOutput.textContent));
+      els.copyBtn.addEventListener('click', copyEmailOutput);
       els.emailMode.addEventListener('change', generateEmail);
-      els.selectedGroup.addEventListener('change', e => { state.currentGroupId = e.target.value; generateEmail(); });
-      els.searchInput.addEventListener('input', e => { state.search = e.target.value.toLowerCase().trim(); renderList(); });
+      els.selectedGroup.addEventListener('change', event => {
+        state.currentGroupId = event.target.value;
+        generateEmail();
+      });
+      els.searchInput.addEventListener('input', event => {
+        state.search = event.target.value.toLowerCase().trim();
+        renderList();
+      });
       els.exportBtn.addEventListener('click', exportData);
       els.importBtn.addEventListener('click', () => els.importFile.click());
       els.importFile.addEventListener('change', importData);
@@ -392,11 +465,10 @@
     }
 
     function setupPWA() {
-      if ('serviceWorker' in navigator) registerServiceWorker();
       injectManifest();
-      window.addEventListener('beforeinstallprompt', e => {
-        e.preventDefault();
-        deferredPrompt = e;
+      window.addEventListener('beforeinstallprompt', event => {
+        event.preventDefault();
+        deferredPrompt = event;
         els.installBtn.style.display = 'inline-flex';
       });
     }
@@ -424,6 +496,8 @@
       };
       const blob = new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' });
       const url = URL.createObjectURL(blob);
+      const previous = document.querySelector('link[rel="manifest"]');
+      if (previous) previous.remove();
       const link = document.createElement('link');
       link.rel = 'manifest';
       link.href = url;
@@ -435,51 +509,28 @@
       return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
     }
 
-    async function registerServiceWorker() {
-      const sw = `
-        const CACHE = 'tour-email-generator-v1';
-        self.addEventListener('install', event => {
-          event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(['./'])));
-          self.skipWaiting();
-        });
-        self.addEventListener('activate', event => {
-          event.waitUntil(self.clients.claim());
-        });
-        self.addEventListener('fetch', event => {
-          if (event.request.method !== 'GET') return;
-          event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
-            const copy = response.clone();
-            caches.open(CACHE).then(cache => cache.put(event.request, copy));
-            return response;
-          }).catch(() => caches.match('./'))));
-        });
-      `;
-      const blob = new Blob([sw], { type: 'application/javascript' });
-      const swUrl = URL.createObjectURL(blob);
-      try { await navigator.serviceWorker.register(swUrl); } catch (e) {}
-    }
-
     function renderSelector() {
       els.tourSelector.innerHTML = '';
-      TOUR_OPTIONS.forEach(tour => {
+      for (const tour of TOUR_OPTIONS) {
         const label = document.createElement('label');
         label.className = 'chip';
-        label.innerHTML = `<input type="checkbox" value="${tour}" ${state.selectedTours.includes(tour) ? 'checked' : ''}> <span>${tour}</span>`;
-        label.querySelector('input').addEventListener('change', e => {
-          if (e.target.checked) {
+        label.innerHTML = `<input type="checkbox" value="${escapeHtml(tour)}" ${state.selectedTours.includes(tour) ? 'checked' : ''}> <span>${escapeHtml(tour)}</span>`;
+        const checkbox = label.querySelector('input');
+        checkbox.addEventListener('change', event => {
+          if (event.target.checked) {
             if (state.selectedTours.length >= 6) {
-              e.target.checked = false;
+              event.target.checked = false;
               alert('You can select up to 6 tours at one time.');
               return;
             }
             state.selectedTours.push(tour);
           } else {
-            state.selectedTours = state.selectedTours.filter(t => t !== tour);
+            state.selectedTours = state.selectedTours.filter(item => item !== tour);
           }
           renderTourBlocks();
         });
         els.tourSelector.appendChild(label);
-      });
+      }
     }
 
     function renderTourBlocks() {
@@ -489,62 +540,70 @@
         return;
       }
 
-      state.selectedTours.forEach((tour, i) => {
-        const options = TOUR_STATUS_OPTIONS[tour].map(s => `<option value="${s}">${s}</option>`).join('');
-        const div = document.createElement('div');
-        div.className = 'tour-block';
-        div.innerHTML = `
+      state.selectedTours.forEach((tour, index) => {
+        const statuses = TOUR_STATUS_OPTIONS[tour] || [];
+        const options = statuses.map(status => `<option value="${escapeHtml(status)}">${escapeHtml(status)}</option>`).join('');
+        const block = document.createElement('div');
+        block.className = 'tour-block';
+        block.innerHTML = `
           <div class="item-top" style="margin-bottom:10px;">
-            <strong>${tour}</strong>
-            <span class="tag">Tour ${i + 1}</span>
+            <strong>${escapeHtml(tour)}</strong>
+            <span class="tag">Tour ${index + 1}</span>
           </div>
           <div class="row-3">
             <div>
               <label>Date</label>
-              <input type="date" data-tour="${tour}" data-field="date" />
+              <input type="date" data-tour="${escapeAttr(tour)}" data-field="date" />
             </div>
             <div>
               <label>Time</label>
-              <input type="time" data-tour="${tour}" data-field="time" value="10:00" />
+              <input type="time" data-tour="${escapeAttr(tour)}" data-field="time" value="10:00" />
             </div>
             <div>
               <label>Status</label>
-              <select data-tour="${tour}" data-field="status">${options}</select>
+              <select data-tour="${escapeAttr(tour)}" data-field="status">${options}</select>
             </div>
           </div>
           <div>
             <label>Optional notes / replacement text</label>
-            <textarea data-tour="${tour}" data-field="notes" placeholder="Use if you want to remember a reservation link, special instructions, or internal notes."></textarea>
+            <textarea data-tour="${escapeAttr(tour)}" data-field="notes" placeholder="Use if you want to remember a reservation link, special instructions, or internal notes."></textarea>
           </div>
         `;
-        els.tourBlocks.appendChild(div);
+        els.tourBlocks.appendChild(block);
       });
     }
 
     function saveGroup() {
       const groupName = els.groupName.value.trim();
-      if (!groupName) return alert('Enter a group or constituent name.');
-      if (!state.selectedTours.length) return alert('Select at least one tour.');
+      if (!groupName) {
+        alert('Enter a group or constituent name.');
+        return;
+      }
+      if (!state.selectedTours.length) {
+        alert('Select at least one tour.');
+        return;
+      }
+
+      const tours = state.selectedTours.map(tour => ({
+        id: createId(),
+        tourType: tour,
+        date: getFieldValue(tour, 'date'),
+        time: getFieldValue(tour, 'time'),
+        status: getFieldValue(tour, 'status') || (TOUR_STATUS_OPTIONS[tour] ? TOUR_STATUS_OPTIONS[tour][0] : ''),
+        notes: getFieldValue(tour, 'notes')
+      }));
 
       const group = {
-        id: crypto.randomUUID(),
+        id: createId(),
         groupName,
         contactName: els.contactName.value.trim(),
         contactEmail: els.contactEmail.value.trim(),
         partySize: els.partySize.value.trim(),
-        staffName: els.staffName.value.trim(),
-        coordinatorName: els.coordinatorName.value.trim(),
+        signoffName: els.signoffName.value.trim(),
         officeLine: els.officeLine.value.trim() || '(202) 225-4540',
         groupNotes: els.groupNotes.value.trim(),
         createdAt: new Date().toISOString(),
-        tours: state.selectedTours.map(tour => ({
-          id: crypto.randomUUID(),
-          tourType: tour,
-          date: getFieldValue(tour, 'date'),
-          time: getFieldValue(tour, 'time'),
-          status: getFieldValue(tour, 'status') || TOUR_STATUS_OPTIONS[tour][0],
-          notes: getFieldValue(tour, 'notes')
-        }))
+        tours
       };
 
       state.groups = [group, ...state.groups].sort((a, b) => a.groupName.localeCompare(b.groupName));
@@ -562,8 +621,7 @@
       els.contactName.value = '';
       els.contactEmail.value = '';
       els.partySize.value = '';
-      els.staffName.value = '';
-      els.coordinatorName.value = '';
+      els.signoffName.value = '';
       els.officeLine.value = '(202) 225-4540';
       els.groupNotes.value = '';
       state.selectedTours = [];
@@ -578,12 +636,12 @@
         return;
       }
       state.groups.forEach(group => {
-        const opt = document.createElement('option');
-        opt.value = group.id;
-        opt.textContent = group.groupName;
-        els.selectedGroup.appendChild(opt);
+        const option = document.createElement('option');
+        option.value = group.id;
+        option.textContent = group.groupName;
+        els.selectedGroup.appendChild(option);
       });
-      if (!state.currentGroupId || !state.groups.some(g => g.id === state.currentGroupId)) {
+      if (!state.currentGroupId || !state.groups.some(group => group.id === state.currentGroupId)) {
         state.currentGroupId = state.groups[0].id;
       }
       els.selectedGroup.value = state.currentGroupId;
@@ -604,19 +662,19 @@
         item.innerHTML = `
           <div class="item-top">
             <div>
-              <strong>${group.groupName}</strong>
-              <div class="small subtle">${group.tours.map(t => `${t.tourType} (${t.status})`).join(' · ')}</div>
+              <strong>${escapeHtml(group.groupName)}</strong>
+              <div class="small subtle">${group.tours.map(tour => `${escapeHtml(tour.tourType)} (${escapeHtml(tour.status)})`).join(' · ')}</div>
             </div>
             <span class="tag">${group.tours.length} tours</span>
           </div>
           <div class="item-grid">
-            <div><strong>Contact:</strong> ${group.contactName || '—'}</div>
-            <div><strong>Email:</strong> ${group.contactEmail || '—'}</div>
-            <div><strong>Party size:</strong> ${group.partySize || '—'}</div>
-            <div><strong>Staff:</strong> ${group.staffName || group.coordinatorName || '—'}</div>
+            <div><strong>Contact:</strong> ${escapeHtml(group.contactName || '—')}</div>
+            <div><strong>Email:</strong> ${escapeHtml(group.contactEmail || '—')}</div>
+            <div><strong>Party size:</strong> ${escapeHtml(group.partySize || '—')}</div>
+            <div><strong>Sign-off:</strong> ${escapeHtml(group.signoffName || '—')}</div>
           </div>
           <div style="margin-bottom:10px;">
-            ${group.tours.map(t => `<div class="tag" style="margin:4px 6px 0 0; display:inline-flex;">${t.tourType} · ${t.status}${t.date ? ' · ' + t.date : ''}${t.time ? ' ' + t.time : ''}</div>`).join('')}
+            ${group.tours.map(tour => `<div class="tag" style="margin:4px 6px 0 0; display:inline-flex;">${escapeHtml(tour.tourType)} · ${escapeHtml(tour.status)}${tour.date ? ' · ' + escapeHtml(tour.date) : ''}${tour.time ? ' ' + escapeHtml(tour.time) : ''}</div>`).join('')}
           </div>
           <div class="list-actions">
             <button class="ghost" data-action="select" data-id="${group.id}">Use for email</button>
@@ -630,78 +688,147 @@
           renderGroupPicker();
           generateEmail();
         });
-        item.querySelector('[data-action="copy"]').addEventListener('click', () => {
+
+        item.querySelector('[data-action="copy"]').addEventListener('click', async () => {
           state.currentGroupId = group.id;
           renderGroupPicker();
           generateEmail();
-          copyText(els.emailOutput.textContent);
+          await copyEmailOutput();
         });
+
         item.querySelector('[data-action="delete"]').addEventListener('click', () => {
-          if (confirm(`Delete ${group.groupName}?`)) {
-            state.groups = state.groups.filter(g => g.id !== group.id);
-            persist();
-            renderGroupPicker();
-            renderList();
-            generateEmail();
+          if (!confirm(`Delete ${group.groupName}?`)) return;
+          state.groups = state.groups.filter(itemGroup => itemGroup.id !== group.id);
+          if (state.currentGroupId === group.id) {
+            state.currentGroupId = state.groups[0]?.id || '';
           }
+          persist();
+          renderGroupPicker();
+          renderList();
+          generateEmail();
         });
+
         els.groupList.appendChild(item);
       });
     }
 
     function generateEmail() {
-      const group = state.groups.find(g => g.id === state.currentGroupId);
+      const group = state.groups.find(item => item.id === state.currentGroupId);
       if (!group) {
-        els.emailOutput.textContent = 'Save a group, select it, and generate an email.';
+        els.emailOutput.innerHTML = 'Save a group, select it, and generate an email.';
         return;
       }
-      els.emailOutput.textContent = buildEmail(els.emailMode.value, group);
+      els.emailOutput.innerHTML = buildEmail(els.emailMode.value, group);
     }
 
     function buildEmail(mode, group) {
-      const statusBlock = group.tours.map(tour => buildTourStatusText(group, tour)).join('\n\n');
       const contact = group.contactName || '___';
-      const staff = group.staffName || '[Insert your name]';
-      const coordinator = group.coordinatorName || '[Tour coordinator name]';
+      const signoff = group.signoffName || '[Tour coordinator name]';
       const phone = group.officeLine || '(202) 225-4540';
+      const bullets = buildTourBullets(group);
 
       if (mode === 'departure') {
-        return `Dear ${contact},\n\nOn behalf of myself and Congressman Josh Harder, we want to thank you very much for letting us be a part of your DC experience. We hope you enjoyed your time here and that you think of us next time you come by!\n\nIf you have any questions or suggestions, please feel free to call our DC main office line ${phone} and ask for the Tour Coordinator.`;
+        return emailHtml({
+          subject: '',
+          greeting: `Dear ${contact},`,
+          intro: 'On behalf of myself and Congressman Josh Harder, we want to thank you very much for letting us be a part of your DC experience. We hope you enjoyed your time here and that you think of us next time you come by!',
+          bullets: [],
+          closing: `If you have any questions or suggestions, please feel free to call our DC main office line ${phone} and ask for the Tour Coordinator.`,
+          signoff
+        });
       }
 
       if (mode === 'arrival') {
-        return `Dear ${contact},\n\nThis is a reminder that your scheduled tour(s) are coming up soon. We are extremely excited to welcome you into our nation’s capital!\nHere is the current status of your tours:\n${statusBlock}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone} and ask for ${staff}.\n\nBest,\n${coordinator}`;
+        return emailHtml({
+          subject: '',
+          greeting: `Dear ${contact},`,
+          intro: 'This is a reminder that your scheduled tour(s) are coming up soon. We are extremely excited to welcome you into our nation’s capital! Here is the current status of your tours:',
+          bullets,
+          closing: `If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone}.`,
+          signoff
+        });
       }
 
       if (mode === 'followup') {
-        return `Dear ${contact},\n\nThank you for applying for tours through our DC office – we’re excited to welcome you here! Please continue to keep an eye out for emails from us to stay up to date on the status of your tour request!\nHere is an update on the current status of your tours:\n${statusBlock}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone} and ask for ${staff}.\n\nBest,\n${coordinator}`;
+        return emailHtml({
+          subject: '',
+          greeting: `Dear ${contact},`,
+          intro: 'Thank you for applying for tours through our DC office – we’re excited to welcome you here! Please continue to keep an eye out for emails from us to stay up to date on the status of your tour request. Here is an update on the current status of your tours:',
+          bullets,
+          closing: `If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone}.`,
+          signoff
+        });
       }
 
       if (mode === 'unavailable') {
-        return `Dear ${contact},\n\nThank you for applying for tours through our DC office. Here is an update on the current status of your tours:\n${statusBlock}\n\nWe recognize that tours in DC fill up very quickly, and we apologize that none of your requested tours were available. Please let us know if there are any other tours that you are interested in during your visit, and if you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone} and ask for ${staff}.\n\nBest,\n${coordinator}`;
+        return emailHtml({
+          subject: '',
+          greeting: `Dear ${contact},`,
+          intro: 'Thank you for applying for tours through our DC office. Here is an update on the current status of your tours:',
+          bullets,
+          closing: `We recognize that tours in DC fill up very quickly, and we apologize that none of your requested tours were available. Please let us know if there are any other tours that you are interested in during your visit, and if you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone}.`,
+          signoff
+        });
       }
 
-      return `SUBJECT: Office of Rep. Harder – DC Tours\n\nDear ${contact},\n\nThank you for applying for tours through our DC office – we’re excited to welcome you here! Each tour has a different application process on our end, and we’ll update you as we hear back. Keep an eye out for emails from us to stay up to date.\nHere is the current status of your tours:\n${statusBlock}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone} and ask for ${staff}.\n\nBest,\n${coordinator}`;
+      return emailHtml({
+        subject: 'SUBJECT: Office of Rep. Harder – DC Tours',
+        greeting: `Dear ${contact},`,
+        intro: 'Thank you for applying for tours through our DC office – we’re excited to welcome you here! Each tour has a different application process on our end, and we’ll update you as we hear back. Keep an eye out for emails from us to stay up to date. Here is the current status of your tours:',
+        bullets,
+        closing: `If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at ${phone}.`,
+        signoff
+      });
     }
 
-    function buildTourStatusText(group, tour) {
-      const fn = STATUS_TEMPLATES[tour.tourType]?.[tour.status];
-      if (!fn) return `${tour.tourType} - [No template found for ${tour.status}]`;
-      return fn({ ...tour, groupName: group.groupName, contactName: group.contactName, partySize: group.partySize });
+    function buildTourStatusText(tour) {
+      const template = STATUS_TEMPLATES[tour.tourType]?.[tour.status];
+      if (!template) return `[No template found for ${tour.status}]`;
+      return template(tour);
+    }
+
+    function buildTourBullets(group) {
+      return group.tours.map(tour => ({
+        title: tour.tourType,
+        items: splitTemplateLines(buildTourStatusText(tour))
+      }));
+    }
+
+    function splitTemplateLines(text) {
+      return String(text)
+        .split(/\n+/)
+        .map(value => value.trim())
+        .filter(Boolean);
+    }
+
+    function emailHtml({ subject, greeting, intro, bullets, closing, signoff }) {
+      const parts = [];
+      if (subject) parts.push(`<p><strong>${escapeHtml(subject)}</strong></p>`);
+      if (greeting) parts.push(`<p>${escapeHtml(greeting)}</p>`);
+      if (intro) parts.push(`<p>${escapeHtml(intro)}</p>`);
+      if (bullets && bullets.length) {
+        parts.push(`<ul>${bullets.map(block => `<li><strong>${escapeHtml(block.title)}</strong>${block.items.length ? `<ul>${block.items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}</li>`).join('')}</ul>`);
+      }
+      if (closing) parts.push(`<p>${escapeHtml(closing)}</p>`);
+      if (signoff) parts.push(`<p>Best,<br>${escapeHtml(signoff)}</p>`);
+      return parts.join('');
     }
 
     function formatDay(tour) {
       if (!tour.date) return 'DAY';
-      const [y, m, d] = tour.date.split('-').map(Number);
-      const date = new Date(y, m - 1, d);
+      const parts = tour.date.split('-').map(Number);
+      if (parts.length !== 3 || parts.some(Number.isNaN)) return 'DAY';
+      const date = new Date(parts[0], parts[1] - 1, parts[2]);
+      if (Number.isNaN(date.getTime())) return 'DAY';
       return date.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
     }
 
     function formatTime(tour) {
       if (!tour.time) return 'TIME';
-      const [hours, minutes] = tour.time.split(':').map(Number);
+      const parts = tour.time.split(':').map(Number);
+      if (parts.length < 2 || parts.some(Number.isNaN)) return 'TIME';
       const date = new Date();
-      date.setHours(hours, minutes, 0, 0);
+      date.setHours(parts[0], parts[1], 0, 0);
       return date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
     }
 
@@ -712,34 +839,59 @@
         group.contactName,
         group.contactEmail,
         group.groupNotes,
-        ...(group.tours || []).flatMap(t => [t.tourType, t.status, t.date, t.time, t.notes])
+        ...(group.tours || []).flatMap(tour => [tour.tourType, tour.status, tour.date, tour.time, tour.notes])
       ].join(' ').toLowerCase();
       return text.includes(state.search);
     }
 
     function getFieldValue(tour, field) {
-      return document.querySelector(`[data-tour="${cssEscape(tour)}"][data-field="${field}"]`)?.value || '';
+      const selector = `[data-tour="${cssEscape(tour)}"][data-field="${field}"]`;
+      return document.querySelector(selector)?.value || '';
     }
 
     function exportData() {
       const blob = new Blob([JSON.stringify(state.groups, null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'tour-email-groups.json';
-      a.click();
-      URL.revokeObjectURL(url);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = 'tour-email-groups.json';
+      anchor.click();
+      setTimeout(() => URL.revokeObjectURL(url), 0);
     }
 
-    function importData(e) {
-      const file = e.target.files?.[0];
+    function importData(event) {
+      const file = event.target.files?.[0];
       if (!file) return;
       const reader = new FileReader();
       reader.onload = () => {
         try {
-          const parsed = JSON.parse(reader.result);
+          const parsed = JSON.parse(String(reader.result || '[]'));
           if (!Array.isArray(parsed)) throw new Error('Invalid file');
-          state.groups = parsed;
+          const normalized = parsed
+            .filter(item => item && typeof item === 'object' && Array.isArray(item.tours))
+            .map(item => ({
+              id: typeof item.id === 'string' && item.id ? item.id : createId(),
+              groupName: typeof item.groupName === 'string' ? item.groupName : 'Untitled Group',
+              contactName: typeof item.contactName === 'string' ? item.contactName : '',
+              contactEmail: typeof item.contactEmail === 'string' ? item.contactEmail : '',
+              partySize: typeof item.partySize === 'string' || typeof item.partySize === 'number' ? String(item.partySize) : '',
+              signoffName: typeof item.signoffName === 'string' ? item.signoffName : '',
+              officeLine: typeof item.officeLine === 'string' && item.officeLine ? item.officeLine : '(202) 225-4540',
+              groupNotes: typeof item.groupNotes === 'string' ? item.groupNotes : '',
+              createdAt: typeof item.createdAt === 'string' ? item.createdAt : new Date().toISOString(),
+              tours: item.tours
+                .filter(tour => tour && typeof tour === 'object' && typeof tour.tourType === 'string')
+                .map(tour => ({
+                  id: typeof tour.id === 'string' && tour.id ? tour.id : createId(),
+                  tourType: tour.tourType,
+                  date: typeof tour.date === 'string' ? tour.date : '',
+                  time: typeof tour.time === 'string' ? tour.time : '',
+                  status: typeof tour.status === 'string' ? tour.status : (TOUR_STATUS_OPTIONS[tour.tourType]?.[0] || ''),
+                  notes: typeof tour.notes === 'string' ? tour.notes : ''
+                }))
+            }))
+            .sort((a, b) => a.groupName.localeCompare(b.groupName));
+          state.groups = normalized;
           state.currentGroupId = state.groups[0]?.id || '';
           persist();
           renderGroupPicker();
@@ -751,7 +903,7 @@
         }
       };
       reader.readAsText(file);
-      e.target.value = '';
+      event.target.value = '';
     }
 
     function persist() {
@@ -761,22 +913,63 @@
     function loadGroups() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
-        return raw ? JSON.parse(raw) : [];
+        const parsed = raw ? JSON.parse(raw) : [];
+        return Array.isArray(parsed) ? parsed : [];
       } catch {
         return [];
       }
     }
 
-    function cssEscape(value) {
-      return window.CSS && CSS.escape ? CSS.escape(value) : value.replace(/"/g, '\\"');
+    function createId() {
+      if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+        return window.crypto.randomUUID();
+      }
+      return `id-${Date.now()}-${Math.random().toString(16).slice(2)}`;
     }
 
-    async function copyText(text) {
+    function cssEscape(value) {
+      if (window.CSS && typeof window.CSS.escape === 'function') {
+        return window.CSS.escape(value);
+      }
+      return String(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function escapeAttr(value) {
+      return String(value ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+    }
+
+    async function copyEmailOutput() {
+      const html = els.emailOutput.innerHTML;
+      const text = els.emailOutput.innerText;
       try {
-        await navigator.clipboard.writeText(text);
+        if (navigator.clipboard && typeof window.ClipboardItem !== 'undefined' && navigator.clipboard.write) {
+          const item = new ClipboardItem({
+            'text/html': new Blob([html], { type: 'text/html' }),
+            'text/plain': new Blob([text], { type: 'text/plain' })
+          });
+          await navigator.clipboard.write([item]);
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          throw new Error('Clipboard unavailable');
+        }
         alert('Copied to clipboard.');
       } catch {
-        alert('Clipboard copy failed on this device/browser.');
+        try {
+          await navigator.clipboard.writeText(text);
+          alert('Copied to clipboard.');
+        } catch {
+          alert('Clipboard copy failed on this device/browser.');
+        }
       }
     }
   </script>
