@@ -22,17 +22,13 @@
       --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(149, 201, 244, 0.45), transparent 35%),
-        linear-gradient(135deg, #f8fbff 0%, #edf4fb 45%, #ffffff 100%);
+      background: radial-gradient(circle at top left, rgba(149, 201, 244, 0.45), transparent 35%), linear-gradient(135deg, #f8fbff 0%, #edf4fb 45%, #ffffff 100%);
       min-height: 100vh;
     }
 
@@ -52,9 +48,7 @@
       align-items: center;
     }
 
-    h1, h2, h3, h4, label, button, .brand-font {
-      font-family: "Montserrat", system-ui, sans-serif;
-    }
+    h1, h2, h3, label, button { font-family: "Montserrat", system-ui, sans-serif; }
 
     h1 {
       margin: 0;
@@ -66,7 +60,7 @@
     header p {
       margin: 10px 0 0;
       color: rgba(255, 255, 255, 0.82);
-      max-width: 740px;
+      max-width: 760px;
       font-size: 1rem;
       line-height: 1.5;
     }
@@ -79,7 +73,7 @@
       border-radius: 999px;
       white-space: nowrap;
       font-family: "Montserrat", sans-serif;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.86rem;
     }
 
@@ -87,13 +81,13 @@
       width: min(1280px, calc(100% - 40px));
       margin: 34px auto 64px;
       display: grid;
-      grid-template-columns: 430px minmax(0, 1fr);
+      grid-template-columns: 440px minmax(0, 1fr);
       gap: 26px;
       align-items: start;
     }
 
     .panel {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       border: 1px solid rgba(0, 52, 98, 0.12);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -120,18 +114,13 @@
       font-size: 0.92rem;
     }
 
-    .panel-body {
-      padding: 22px;
-    }
+    .panel-body { padding: 22px; }
 
-    .form-grid {
-      display: grid;
-      gap: 16px;
-    }
+    .form-grid, .layout-right, .saved-groups, .tour-fields { display: grid; gap: 16px; }
 
     label {
       display: block;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--navy);
       font-size: 0.84rem;
       margin-bottom: 7px;
@@ -155,11 +144,6 @@
       box-shadow: 0 0 0 4px rgba(149, 201, 244, 0.35);
     }
 
-    textarea {
-      min-height: 92px;
-      resize: vertical;
-    }
-
     .two-col {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -173,16 +157,13 @@
       background: #fbfdff;
     }
 
-    .tour-card + .tour-card {
-      margin-top: 13px;
-    }
+    .tour-card + .tour-card { margin-top: 13px; }
 
     .tour-topline {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 12px;
     }
 
     .tour-title {
@@ -196,32 +177,29 @@
     }
 
     .tour-toggle {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
       accent-color: var(--navy);
       flex: 0 0 auto;
+      cursor: pointer;
     }
 
     .tour-fields {
-      display: grid;
-      gap: 11px;
-    }
-
-    .tour-fields.hidden {
-      display: none;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0, 52, 98, 0.1);
     }
 
     .status-pill {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
       background: rgba(246, 183, 55, 0.2);
       border: 1px solid rgba(246, 183, 55, 0.55);
       color: #604000;
       padding: 7px 10px;
       border-radius: 999px;
       font-size: 0.78rem;
-      font-weight: 700;
+      font-weight: 800;
       font-family: "Montserrat", sans-serif;
       white-space: nowrap;
     }
@@ -239,49 +217,17 @@
       padding: 11px 15px;
       font-weight: 800;
       cursor: pointer;
-      transition: transform 0.16s, box-shadow 0.16s, background 0.16s;
+      transition: transform 0.16s, box-shadow 0.16s;
       font-size: 0.88rem;
     }
 
-    button:hover {
-      transform: translateY(-1px);
-    }
+    button:hover { transform: translateY(-1px); }
 
-    .btn-primary {
-      background: var(--navy);
-      color: var(--white);
-      box-shadow: 0 10px 20px rgba(0, 52, 98, 0.2);
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #2a1b00;
-    }
-
-    .btn-light {
-      background: var(--gray);
-      color: var(--navy);
-    }
-
-    .btn-danger {
-      background: #fee4e2;
-      color: var(--danger);
-    }
-
-    .btn-success {
-      background: #ccfbf1;
-      color: var(--success);
-    }
-
-    .layout-right {
-      display: grid;
-      gap: 26px;
-    }
-
-    .saved-groups {
-      display: grid;
-      gap: 12px;
-    }
+    .btn-primary { background: var(--navy); color: var(--white); box-shadow: 0 10px 20px rgba(0, 52, 98, 0.2); }
+    .btn-gold { background: var(--gold); color: #2a1b00; }
+    .btn-light { background: var(--gray); color: var(--navy); }
+    .btn-danger { background: #fee4e2; color: var(--danger); }
+    .btn-success { background: #ccfbf1; color: var(--success); }
 
     .group-row {
       display: grid;
@@ -294,18 +240,8 @@
       background: #fbfdff;
     }
 
-    .group-row h3 {
-      margin: 0;
-      color: var(--navy);
-      font-size: 1rem;
-    }
-
-    .group-row p {
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.4;
-    }
+    .group-row h3 { margin: 0; color: var(--navy); font-size: 1rem; }
+    .group-row p { margin: 6px 0 0; color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
 
     .group-actions {
       display: flex;
@@ -316,7 +252,7 @@
 
     .email-controls {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       margin-bottom: 18px;
     }
@@ -332,18 +268,9 @@
       font-size: 0.96rem;
     }
 
-    .email-preview ul {
-      margin: 0.5rem 0 0.9rem 1.4rem;
-      padding: 0;
-    }
-
-    .email-preview li {
-      margin: 0.45rem 0;
-    }
-
-    .email-preview .subbullet {
-      margin-left: 1.4rem;
-    }
+    .email-preview ul { margin: 0.5rem 0 0.9rem 1.4rem; padding: 0; }
+    .email-preview li { margin: 0.45rem 0; }
+    .email-preview .subbullet { margin-left: 1.4rem; }
 
     .empty-state {
       border: 1px dashed rgba(0, 52, 98, 0.26);
@@ -364,13 +291,6 @@
       line-height: 1.4;
     }
 
-    .inline-notice {
-      margin-top: 0;
-      min-height: 43px;
-      display: flex;
-      align-items: center;
-    }
-
     .small-note {
       color: var(--muted);
       font-size: 0.82rem;
@@ -378,46 +298,20 @@
       margin-top: 7px;
     }
 
-    .hidden {
-      display: none !important;
-    }
+    .hidden { display: none !important; }
 
     @media (max-width: 980px) {
-      .header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .storage-status {
-        white-space: normal;
-      }
-
-      main {
-        grid-template-columns: 1fr;
-        width: min(100% - 24px, 760px);
-      }
-
-      .email-controls {
-        grid-template-columns: 1fr;
-      }
+      .header-inner { align-items: flex-start; flex-direction: column; }
+      .storage-status { white-space: normal; }
+      main { grid-template-columns: 1fr; width: min(100% - 24px, 760px); }
+      .email-controls { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
-      header {
-        padding: 24px 18px;
-      }
-
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-
-      .group-row {
-        grid-template-columns: 1fr;
-      }
-
-      .group-actions {
-        justify-content: flex-start;
-      }
+      header { padding: 24px 18px; }
+      .two-col { grid-template-columns: 1fr; }
+      .group-row { grid-template-columns: 1fr; }
+      .group-actions { justify-content: flex-start; }
     }
   </style>
 </head>
@@ -426,7 +320,7 @@
     <div class="header-inner">
       <div>
         <h1>Tour Tracker Email Generator</h1>
-        <p>Save tour groups, edit bookings, and generate constituent-ready tour emails using the official office language.</p>
+        <p>Save tour groups, select tours, assign each tour its own language, and generate the correct email body.</p>
       </div>
       <div class="storage-status" id="storageStatus">Local storage ready</div>
     </div>
@@ -436,17 +330,15 @@
     <section class="panel">
       <div class="panel-header">
         <h2 id="formTitle">Add Tour Group</h2>
-        <p>Enter the group details, select the tours requested or booked, then save. Groups are stored in this browser.</p>
+        <p>Select each tour with the checkbox, then set that tour’s date, time, and individual language.</p>
       </div>
       <div class="panel-body">
         <form id="groupForm" class="form-grid">
           <input type="hidden" id="groupId" />
-
           <div>
             <label for="groupName">Name of Group</label>
             <input id="groupName" type="text" placeholder="Example: Smith Family" required />
           </div>
-
           <div class="two-col">
             <div>
               <label for="recipientName">Email Greeting Name</label>
@@ -457,18 +349,15 @@
               <input id="coordinatorName" type="text" placeholder="Example: Evan" />
             </div>
           </div>
-
           <div>
             <label for="officeName">Office / Member Name</label>
             <input id="officeName" type="text" value="Office of Rep. Harder" />
             <div class="small-note">Used in the subject line.</div>
           </div>
-
           <div>
             <label>Selected Tours</label>
             <div id="tourCards"></div>
           </div>
-
           <div class="actions">
             <button class="btn-primary" type="submit">Save Group</button>
             <button class="btn-light" type="button" id="resetFormBtn">Clear Form</button>
@@ -481,7 +370,7 @@
       <section class="panel">
         <div class="panel-header">
           <h2>Saved Groups</h2>
-          <p>Select a saved group to edit it or generate an email.</p>
+          <p>Edit a group, delete it, or use it to generate an email.</p>
         </div>
         <div class="panel-body">
           <div id="savedGroups" class="saved-groups"></div>
@@ -491,7 +380,7 @@
       <section class="panel">
         <div class="panel-header">
           <h2>Email Generator</h2>
-          <p>Choose a saved group and email type. The generated email follows the tour language document.</p>
+          <p>The email body type is separate from the individual language chosen for each tour.</p>
         </div>
         <div class="panel-body">
           <div class="email-controls">
@@ -500,7 +389,7 @@
               <select id="emailGroupSelect"></select>
             </div>
             <div>
-              <label for="emailTypeSelect">Email Type</label>
+              <label for="emailTypeSelect">Email Body Type</label>
               <select id="emailTypeSelect">
                 <option value="introduction">Introduction</option>
                 <option value="followup">Tour Request Follow up</option>
@@ -508,10 +397,6 @@
                 <option value="departures">Departures</option>
                 <option value="noAvailability">No Availability for Tours</option>
               </select>
-            </div>
-            <div>
-              <label>Tour Language</label>
-              <div class="notice inline-notice">Selected individually for each tour inside the saved group.</div>
             </div>
           </div>
 
@@ -534,7 +419,7 @@
             <input id="backupFileInput" class="hidden" type="file" accept="application/json" />
           </div>
 
-          <div class="notice">Tip: copied email text preserves bullet/sub-bullet structure. Bold styling is visible in the preview but may paste differently depending on the email client.</div>
+          <div class="notice">Tip: choose the body type here, but choose Confirmation, Pending, No Availability, RSVP, etc. separately under each selected tour.</div>
           <div id="emailSubject" class="notice hidden"></div>
           <div id="emailPreview" class="email-preview" aria-live="polite">Choose a group and click “Generate Email.”</div>
         </div>
@@ -543,78 +428,31 @@
   </main>
 
   <script>
-    const STORAGE_KEY = "tourTrackerGroupsV2";
+    const STORAGE_KEY = "tourTrackerGroupsV3";
 
-    const LANGUAGE_OPTIONS = [
-      { value: "confirmation", label: "Confirmation" },
-      { value: "staffLedCapitol", label: "Capitol Staff-Led Confirmation" },
-      { value: "pending", label: "Pending" },
-      { value: "noAvailability", label: "No Availability" },
-      { value: "requested", label: "Requested / Submitted" },
-      { value: "whiteHouseRsvp", label: "White House RSVP" },
-      { value: "whiteHouseCurrentStatus", label: "White House Current Status" },
-      { value: "whiteHouseMemberPasses", label: "White House Member Passes" },
-      { value: "whiteHouseCancelledReservation", label: "White House Cancelled Reservation" },
-      { value: "supremeCourtNoReservedSeating", label: "Supreme Court No Reserved Seating" },
-      { value: "supremeCourtGroupLargerThan6", label: "Supreme Court Group Larger Than 6" },
-      { value: "bepGroup10OrMore", label: "BEP Group of 10 or More" },
-      { value: "fbiNeedInformation", label: "FBI Need Information" }
-    ];
+    const STATUS_LABELS = {
+      confirmation: "Confirmation",
+      staffLedCapitol: "Capitol Staff-Led Confirmation",
+      pending: "Pending",
+      noAvailability: "No Availability",
+      requested: "Requested / Submitted",
+      whiteHouseRsvp: "White House RSVP",
+      whiteHouseCurrentStatus: "White House Current Status",
+      whiteHouseMemberPasses: "White House Member Passes",
+      whiteHouseCancelledReservation: "White House Cancelled Reservation",
+      supremeCourtNoReservedSeating: "Supreme Court No Reserved Seating",
+      supremeCourtGroupLargerThan6: "Supreme Court Group Larger Than 6",
+      bepGroup10OrMore: "BEP Group of 10 or More",
+      fbiNeedInformation: "FBI Need Information"
+    };
 
     const TOUR_DEFINITIONS = [
-      {
-        key: "capitol",
-        label: "U.S. Capitol",
-        emailName: "U.S. Capitol Building",
-        needsTime: true,
-        defaultTime: "10:00 AM",
-        timeOptions: makeTimeOptions("8:50 AM", "3:20 PM", 10),
-        allowedStatuses: ["confirmation", "staffLedCapitol", "noAvailability"]
-      },
-      {
-        key: "loc",
-        label: "Library of Congress",
-        emailName: "Library of Congress",
-        needsTime: true,
-        defaultTime: "10:00 AM",
-        timeOptions: makeTimeOptions("10:00 AM", "4:00 PM", 15),
-        allowedStatuses: ["confirmation", "pending", "noAvailability"]
-      },
-      {
-        key: "whiteHouse",
-        label: "White House",
-        emailName: "White House",
-        needsTime: true,
-        defaultTime: "8:00 AM",
-        timeOptions: makeTimeOptions("7:30 AM", "12:30 PM", 30),
-        allowedStatuses: ["whiteHouseRsvp", "confirmation", "pending", "whiteHouseCurrentStatus", "noAvailability", "whiteHouseMemberPasses", "whiteHouseCancelledReservation"]
-      },
-      {
-        key: "supremeCourt",
-        label: "Supreme Court Lecture",
-        emailName: "Supreme Court Lecture",
-        needsTime: false,
-        fixedTime: "12:30 pm",
-        allowedStatuses: ["confirmation", "pending", "noAvailability", "supremeCourtNoReservedSeating", "supremeCourtGroupLargerThan6"]
-      },
-      {
-        key: "fbi",
-        label: "FBI",
-        emailName: "FBI",
-        needsTime: true,
-        defaultTime: "9:00 AM",
-        timeOptions: makeTimeOptions("9:00 AM", "3:00 PM", 30),
-        allowedStatuses: ["fbiNeedInformation", "requested", "noAvailability"]
-      },
-      {
-        key: "bep",
-        label: "Bureau of Engraving and Printing",
-        emailName: "Bureau of Engraving and Printing",
-        needsTime: true,
-        defaultTime: "9:00 AM",
-        timeOptions: makeTimeOptions("9:00 AM", "2:00 PM", 30),
-        allowedStatuses: ["requested", "confirmation", "pending", "noAvailability", "bepGroup10OrMore"]
-      }
+      { key: "capitol", label: "U.S. Capitol", needsTime: true, defaultTime: "10:00 AM", timeOptions: makeTimeOptions("8:50 AM", "3:20 PM", 10), allowedStatuses: ["confirmation", "staffLedCapitol", "noAvailability"] },
+      { key: "loc", label: "Library of Congress", needsTime: true, defaultTime: "10:00 AM", timeOptions: makeTimeOptions("10:00 AM", "4:00 PM", 15), allowedStatuses: ["confirmation", "pending", "noAvailability"] },
+      { key: "whiteHouse", label: "White House", needsTime: true, defaultTime: "8:00 AM", timeOptions: makeTimeOptions("7:30 AM", "12:30 PM", 30), allowedStatuses: ["whiteHouseRsvp", "confirmation", "pending", "whiteHouseCurrentStatus", "noAvailability", "whiteHouseMemberPasses", "whiteHouseCancelledReservation"] },
+      { key: "supremeCourt", label: "Supreme Court Lecture", needsTime: false, fixedTime: "12:30 pm", allowedStatuses: ["confirmation", "pending", "noAvailability", "supremeCourtNoReservedSeating", "supremeCourtGroupLargerThan6"] },
+      { key: "fbi", label: "FBI", needsTime: true, defaultTime: "9:00 AM", timeOptions: makeTimeOptions("9:00 AM", "3:00 PM", 30), allowedStatuses: ["fbiNeedInformation", "requested", "noAvailability"] },
+      { key: "bep", label: "Bureau of Engraving and Printing", needsTime: true, defaultTime: "9:00 AM", timeOptions: makeTimeOptions("9:00 AM", "2:00 PM", 30), allowedStatuses: ["requested", "confirmation", "pending", "noAvailability", "bepGroup10OrMore"] }
     ];
 
     let groups = loadGroups();
@@ -653,19 +491,14 @@
 
     function buildTourCards() {
       tourCards.innerHTML = TOUR_DEFINITIONS.map(tour => {
-        const statusOptions = tour.allowedStatuses
-          .map(value => LANGUAGE_OPTIONS.find(option => option.value === value))
-          .filter(Boolean)
-          .map(option => `<option value="${option.value}">${option.label}</option>`)
-          .join("");
-
+        const statusOptions = tour.allowedStatuses.map(status => `<option value="${status}">${STATUS_LABELS[status]}</option>`).join("");
         return `
-          <article class="tour-card" data-tour-card="${tour.key}">
+          <article class="tour-card">
             <div class="tour-topline">
-              <div class="tour-title">
+              <label class="tour-title" for="${tour.key}Enabled">
                 <input class="tour-toggle" type="checkbox" id="${tour.key}Enabled" data-tour-toggle="${tour.key}" />
                 <span>${tour.label}</span>
-              </div>
+              </label>
               ${tour.needsTime ? "" : `<span class="status-pill">Fixed: ${tour.fixedTime}</span>`}
             </div>
             <div class="tour-fields hidden" id="${tour.key}Fields">
@@ -674,22 +507,13 @@
                   <label for="${tour.key}Date">Date</label>
                   <input id="${tour.key}Date" type="date" />
                 </div>
-                ${tour.needsTime ? `
-                  <div>
-                    <label for="${tour.key}Time">Time</label>
-                    <select id="${tour.key}Time">
-                      ${tour.timeOptions.map(time => `<option value="${time}" ${time === tour.defaultTime ? "selected" : ""}>${time}</option>`).join("")}
-                    </select>
-                  </div>
-                ` : `
-                  <div>
-                    <label>Time</label>
-                    <input type="text" value="${tour.fixedTime}" disabled />
-                  </div>
-                `}
+                <div>
+                  <label for="${tour.key}Time">Time</label>
+                  ${tour.needsTime ? `<select id="${tour.key}Time">${tour.timeOptions.map(time => `<option value="${time}" ${time === tour.defaultTime ? "selected" : ""}>${time}</option>`).join("")}</select>` : `<input id="${tour.key}Time" type="text" value="${tour.fixedTime}" disabled />`}
+                </div>
               </div>
               <div>
-                <label for="${tour.key}Status">Tour Language</label>
+                <label for="${tour.key}Status">Individual Tour Language</label>
                 <select id="${tour.key}Status">${statusOptions}</select>
               </div>
             </div>
@@ -711,13 +535,11 @@
       const selectedTours = {};
 
       TOUR_DEFINITIONS.forEach(tour => {
-        const enabled = document.getElementById(`${tour.key}Enabled`).checked;
-        if (!enabled) return;
-
+        if (!document.getElementById(`${tour.key}Enabled`).checked) return;
         selectedTours[tour.key] = {
           enabled: true,
           date: document.getElementById(`${tour.key}Date`).value,
-          time: tour.needsTime ? document.getElementById(`${tour.key}Time`).value : tour.fixedTime,
+          time: document.getElementById(`${tour.key}Time`).value,
           languageStatus: document.getElementById(`${tour.key}Status`).value
         };
       });
@@ -732,12 +554,9 @@
         updatedAt: new Date().toISOString()
       };
 
-      const existingIndex = groups.findIndex(item => item.id === id);
-      if (existingIndex >= 0) {
-        groups[existingIndex] = group;
-      } else {
-        groups.unshift(group);
-      }
+      const index = groups.findIndex(item => item.id === id);
+      if (index >= 0) groups[index] = group;
+      else groups.unshift(group);
 
       persistGroups();
       resetForm();
@@ -759,13 +578,13 @@
       officeNameInput.value = group.officeName || "Office of Rep. Harder";
 
       TOUR_DEFINITIONS.forEach(tour => {
-        const tourData = group.tours?.[tour.key];
-        const enabledInput = document.getElementById(`${tour.key}Enabled`);
-        enabledInput.checked = Boolean(tourData?.enabled);
-        document.getElementById(`${tour.key}Fields`).classList.toggle("hidden", !enabledInput.checked);
-        document.getElementById(`${tour.key}Date`).value = tourData?.date || "";
-        if (tour.needsTime) document.getElementById(`${tour.key}Time`).value = tourData?.time || tour.defaultTime;
-        document.getElementById(`${tour.key}Status`).value = sanitizeStatus(tour, tourData?.languageStatus);
+        const data = group.tours?.[tour.key];
+        const enabled = document.getElementById(`${tour.key}Enabled`);
+        enabled.checked = Boolean(data?.enabled);
+        document.getElementById(`${tour.key}Fields`).classList.toggle("hidden", !enabled.checked);
+        document.getElementById(`${tour.key}Date`).value = data?.date || "";
+        document.getElementById(`${tour.key}Time`).value = data?.time || (tour.needsTime ? tour.defaultTime : tour.fixedTime);
+        document.getElementById(`${tour.key}Status`).value = sanitizeStatus(tour, data?.languageStatus);
       });
 
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -774,8 +593,7 @@
     function deleteGroup(id) {
       const group = groups.find(item => item.id === id);
       if (!group) return;
-      const confirmed = confirm(`Delete ${group.groupName}? This cannot be undone.`);
-      if (!confirmed) return;
+      if (!confirm(`Delete ${group.groupName}? This cannot be undone.`)) return;
       groups = groups.filter(item => item.id !== id);
       persistGroups();
       renderSavedGroups();
@@ -793,7 +611,7 @@
         document.getElementById(`${tour.key}Enabled`).checked = false;
         document.getElementById(`${tour.key}Fields`).classList.add("hidden");
         document.getElementById(`${tour.key}Date`).value = "";
-        if (tour.needsTime) document.getElementById(`${tour.key}Time`).value = tour.defaultTime;
+        document.getElementById(`${tour.key}Time`).value = tour.needsTime ? tour.defaultTime : tour.fixedTime;
         document.getElementById(`${tour.key}Status`).value = tour.allowedStatuses[0];
       });
     }
@@ -805,14 +623,10 @@
       }
 
       savedGroups.innerHTML = groups.map(group => {
-        const tourSummary = TOUR_DEFINITIONS
-          .filter(tour => group.tours?.[tour.key]?.enabled)
-          .map(tour => {
-            const data = group.tours[tour.key];
-            const statusLabel = getStatusLabel(sanitizeStatus(tour, data.languageStatus));
-            return `${tour.label}${data.date ? ` on ${formatDate(data.date)}` : ""}${data.time ? ` at ${data.time}` : ""} — ${statusLabel}`;
-          })
-          .join("; ") || "No tours selected";
+        const tourSummary = TOUR_DEFINITIONS.filter(tour => group.tours?.[tour.key]?.enabled).map(tour => {
+          const data = group.tours[tour.key];
+          return `${tour.label}${data.date ? ` on ${formatDate(data.date)}` : ""}${data.time ? ` at ${data.time}` : ""} — ${STATUS_LABELS[sanitizeStatus(tour, data.languageStatus)]}`;
+        }).join("; ") || "No tours selected";
 
         return `
           <article class="group-row">
@@ -832,11 +646,9 @@
 
       savedGroups.querySelectorAll("button[data-action]").forEach(button => {
         button.addEventListener("click", () => {
-          const action = button.dataset.action;
-          const id = button.dataset.id;
-          if (action === "edit") editGroup(id);
-          if (action === "use") selectGroupForEmail(id);
-          if (action === "delete") deleteGroup(id);
+          if (button.dataset.action === "edit") editGroup(button.dataset.id);
+          if (button.dataset.action === "use") selectGroupForEmail(button.dataset.id);
+          if (button.dataset.action === "delete") deleteGroup(button.dataset.id);
         });
       });
     }
@@ -847,8 +659,7 @@
         latestPlainTextEmail = "";
         return;
       }
-
-      emailGroupSelect.innerHTML = groups.map(group => `<option value="${escapeHtml(group.id)}" ${group.id === selectedId ? "selected" : ""}>${escapeHtml(group.groupName)}</option>`).join("");
+      emailGroupSelect.innerHTML = groups.map(group => `<option value="${escapeHtml(group.id)}">${escapeHtml(group.groupName)}</option>`).join("");
       if (selectedId) emailGroupSelect.value = selectedId;
     }
 
@@ -867,140 +678,330 @@
         return;
       }
 
-      const emailType = emailTypeSelect.value;
+      const subject = `${group.officeName || "Office of Rep. Harder"} – DC Tours`;
       const statusHtml = buildStatusHtml(group);
       const statusText = buildStatusText(group);
-      updateWhiteHouseExtrasVisibility();
       const greetingName = group.recipientName || group.groupName || "____";
       const coordinator = group.coordinatorName || "[Tour coordinator name]";
-      const officeName = group.officeName || "Office of Rep. Harder";
-      const subject = `${officeName} – DC Tours`;
-      let html = "";
-      let text = "";
+      const email = buildEmailBody(emailTypeSelect.value, greetingName, coordinator, statusHtml, statusText);
 
-      if (emailType === "introduction") {
-        html = `Dear ${escapeHtml(greetingName)},<br><br>
-Thank you for applying for tours through our DC office – we’re excited to welcome you here!<br><br>
-Each tour has a different application process on our end, and we’ll update you as we hear back.<br><br>
-Keep an eye out for emails from us to stay up to date.<br><br>
-Here is the current status of your tours:<br>
-${statusHtml}<br>
-If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.<br><br>
-Best,<br>
-${escapeHtml(coordinator)}`;
-        text = `Dear ${greetingName}\n\nThank you for applying for tours through our DC office – we’re excited to welcome you here!\n\nEach tour has a different application process on our end, and we’ll update you as we hear back.\n\nKeep an eye out for emails from us to stay up to date.\n\nHere is the current status of your tours:\n${statusText}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.\n\nBest,\n${coordinator}`;
-      }
-
-      if (emailType === "followup") {
-        html = `Dear ${escapeHtml(greetingName)},<br><br>
-Thank you for applying for tours through our DC office – we’re excited to welcome you here!<br><br>
-Please continue to keep an eye out for emails from us to stay up to date on the status of your tour request!<br><br>
-Here is an update on the current status of your tours:<br>
-${statusHtml}<br>
-If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${escapeHtml(coordinator)}.<br><br>
-Best,<br>
-${escapeHtml(coordinator)}`;
-        text = `Dear ${greetingName}\n\nThank you for applying for tours through our DC office – we’re excited to welcome you here!\n\nPlease continue to keep an eye out for emails from us to stay up to date on the status of your tour request!\n\nHere is an update on the current status of your tours:\n${statusText}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${coordinator}.\n\nBest,\n${coordinator}`;
-      }
-
-      if (emailType === "arrival") {
-        html = `Dear ${escapeHtml(greetingName)},<br><br>
-This is a reminder that your scheduled tour(s) are coming up soon. We are extremely excited to welcome you into our nation’s capital!<br><br>
-Here is the current status of your tours:<br>
-${statusHtml}<br>
-If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${escapeHtml(coordinator)}.<br><br>
-Best,<br>
-${escapeHtml(coordinator)}`;
-        text = `Dear ${greetingName}\n\nThis is a reminder that your scheduled tour(s) are coming up soon. We are extremely excited to welcome you into our nation’s capital!\n\nHere is the current status of your tours:\n${statusText}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${coordinator}.\n\nBest,\n${coordinator}`;
-      }
-
-      if (emailType === "departures") {
-        html = `Dear ${escapeHtml(greetingName)},<br><br>
-On behalf of myself and Congressman Josh Harder, we want to thank you very much for letting us be a part of your DC experience. We hope you enjoyed your time here and that you think of us next time you come by!<br><br>
-If you have any questions or suggestions, please feel free to call our DC main office line (202) 225-4540 and ask for the Tour Coordinator.`;
-        text = `Dear ${greetingName}\n\nOn behalf of myself and Congressman Josh Harder, we want to thank you very much for letting us be a part of your DC experience. We hope you enjoyed your time here and that you think of us next time you come by!\n\nIf you have any questions or suggestions, please feel free to call our DC main office line (202) 225-4540 and ask for the Tour Coordinator.`;
-      }
-
-      if (emailType === "noAvailability") {
-        html = `Dear ${escapeHtml(greetingName)},<br><br>
-Thank you for applying for tours through our DC office. Here is an update on the current status of your tours:<br>
-${statusHtml}<br>
-We recognize that tours in DC fill up very quickly, and we apologize that none of your requested tours were available. However, there remains some availability at the following locations:<br>
-<ul>
-  <li>U.S. Capitol – tours are offered between 8:50 AM and 3:20 PM Monday through Saturday</li>
-  <li>Supreme Court – lectures are offered between 10:30 AM and 2:30 PM Monday through Friday</li>
-  <li>Library of Congress – timed entry passes are offered between 10 AM and 4 PM Tuesday through Saturday</li>
-  <li>Bureau of Engraving and Printing – tours are offered between 9 AM and 2 PM Monday through Friday</li>
-  <li>Federal Bureau of Investigation – as of today, there is limited tour availability on [insert dates]</li>
-  <li>White House – as of today, there is limited tour availability on [insert dates]</li>
-</ul>
-Please let us know if you are interested in any of these tours during your visit, and if you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.<br><br>
-Best,<br>
-${escapeHtml(coordinator)}`;
-        text = `Dear ${greetingName}\n\nThank you for applying for tours through our DC office. Here is an update on the current status of your tours:\n${statusText}\n\nWe recognize that tours in DC fill up very quickly, and we apologize that none of your requested tours were available. However, there remains some availability at the following locations:\n• U.S. Capitol – tours are offered between 8:50 AM and 3:20 PM Monday through Saturday\n• Supreme Court – lectures are offered between 10:30 AM and 2:30 PM Monday through Friday\n• Library of Congress – timed entry passes are offered between 10 AM and 4 PM Tuesday through Saturday\n• Bureau of Engraving and Printing – tours are offered between 9 AM and 2 PM Monday through Friday\n• Federal Bureau of Investigation – as of today, there is limited tour availability on [insert dates]\n• White House – as of today, there is limited tour availability on [insert dates]\n\nPlease let us know if you are interested in any of these tours during your visit, and if you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.\n\nBest,\n${coordinator}`;
-      }
-
-      latestPlainTextEmail = `SUBJECT: ${subject}\n\n${text}`;
+      latestPlainTextEmail = `SUBJECT: ${subject}\n\n${email.text}`;
       emailSubject.classList.remove("hidden");
       emailSubject.textContent = `SUBJECT: ${subject}`;
-      emailPreview.innerHTML = html;
+      emailPreview.innerHTML = email.html;
+      updateWhiteHouseExtrasVisibility();
+    }
+
+    function buildEmailBody(type, name, coordinator, statusHtml, statusText) {
+      if (type === "introduction") {
+        return {
+          html: `Dear ${escapeHtml(name)},<br><br>Thank you for applying for tours through our DC office – we’re excited to welcome you here!<br><br>Each tour has a different application process on our end, and we’ll update you as we hear back.<br><br>Keep an eye out for emails from us to stay up to date.<br><br>Here is the current status of your tours:<br>${statusHtml}<br>If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.<br><br>Best,<br>${escapeHtml(coordinator)}`,
+          text: `Dear ${name}\n\nThank you for applying for tours through our DC office – we’re excited to welcome you here!\n\nEach tour has a different application process on our end, and we’ll update you as we hear back.\n\nKeep an eye out for emails from us to stay up to date.\n\nHere is the current status of your tours:\n${statusText}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.\n\nBest,\n${coordinator}`
+        };
+      }
+      if (type === "followup") {
+        return {
+          html: `Dear ${escapeHtml(name)},<br><br>Thank you for applying for tours through our DC office – we’re excited to welcome you here!<br><br>Please continue to keep an eye out for emails from us to stay up to date on the status of your tour request!<br><br>Here is an update on the current status of your tours:<br>${statusHtml}<br>If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${escapeHtml(coordinator)}.<br><br>Best,<br>${escapeHtml(coordinator)}`,
+          text: `Dear ${name}\n\nThank you for applying for tours through our DC office – we’re excited to welcome you here!\n\nPlease continue to keep an eye out for emails from us to stay up to date on the status of your tour request!\n\nHere is an update on the current status of your tours:\n${statusText}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${coordinator}.\n\nBest,\n${coordinator}`
+        };
+      }
+      if (type === "arrival") {
+        return {
+          html: `Dear ${escapeHtml(name)},<br><br>This is a reminder that your scheduled tour(s) are coming up soon. We are extremely excited to welcome you into our nation’s capital!<br><br>Here is the current status of your tours:<br>${statusHtml}<br>If you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${escapeHtml(coordinator)}.<br><br>Best,<br>${escapeHtml(coordinator)}`,
+          text: `Dear ${name}\n\nThis is a reminder that your scheduled tour(s) are coming up soon. We are extremely excited to welcome you into our nation’s capital!\n\nHere is the current status of your tours:\n${statusText}\n\nIf you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540 and ask for ${coordinator}.\n\nBest,\n${coordinator}`
+        };
+      }
+      if (type === "departures") {
+        return {
+          html: `Dear ${escapeHtml(name)},<br><br>On behalf of myself and Congressman Josh Harder, we want to thank you very much for letting us be a part of your DC experience. We hope you enjoyed your time here and that you think of us next time you come by!<br><br>If you have any questions or suggestions, please feel free to call our DC main office line (202) 225-4540 and ask for the Tour Coordinator.`,
+          text: `Dear ${name}\n\nOn behalf of myself and Congressman Josh Harder, we want to thank you very much for letting us be a part of your DC experience. We hope you enjoyed your time here and that you think of us next time you come by!\n\nIf you have any questions or suggestions, please feel free to call our DC main office line (202) 225-4540 and ask for the Tour Coordinator.`
+        };
+      }
+      return {
+        html: `Dear ${escapeHtml(name)},<br><br>Thank you for applying for tours through our DC office. Here is an update on the current status of your tours:<br>${statusHtml}<br>We recognize that tours in DC fill up very quickly, and we apologize that none of your requested tours were available. However, there remains some availability at the following locations:<br><ul><li>U.S. Capitol – tours are offered between 8:50 AM and 3:20 PM Monday through Saturday</li><li>Supreme Court – lectures are offered between 10:30 AM and 2:30 PM Monday through Friday</li><li>Library of Congress – timed entry passes are offered between 10 AM and 4 PM Tuesday through Saturday</li><li>Bureau of Engraving and Printing – tours are offered between 9 AM and 2 PM Monday through Friday</li><li>Federal Bureau of Investigation – as of today, there is limited tour availability on [insert dates]</li><li>White House – as of today, there is limited tour availability on [insert dates]</li></ul>Please let us know if you are interested in any of these tours during your visit, and if you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.<br><br>Best,<br>${escapeHtml(coordinator)}`,
+        text: `Dear ${name}\n\nThank you for applying for tours through our DC office. Here is an update on the current status of your tours:\n${statusText}\n\nWe recognize that tours in DC fill up very quickly, and we apologize that none of your requested tours were available. However, there remains some availability at the following locations:\n• U.S. Capitol – tours are offered between 8:50 AM and 3:20 PM Monday through Saturday\n• Supreme Court – lectures are offered between 10:30 AM and 2:30 PM Monday through Friday\n• Library of Congress – timed entry passes are offered between 10 AM and 4 PM Tuesday through Saturday\n• Bureau of Engraving and Printing – tours are offered between 9 AM and 2 PM Monday through Friday\n• Federal Bureau of Investigation – as of today, there is limited tour availability on [insert dates]\n• White House – as of today, there is limited tour availability on [insert dates]\n\nPlease let us know if you are interested in any of these tours during your visit, and if you have any questions, concerns, or a change of plans, feel free to email us back at this email or call our DC main office line at (202) 225-4540.\n\nBest,\n${coordinator}`
+      };
     }
 
     function buildStatusHtml(group) {
       const selectedTours = TOUR_DEFINITIONS.filter(tour => group.tours?.[tour.key]?.enabled);
       if (!selectedTours.length) return `<div class="empty-state">[insert status]</div>`;
-      return `<ul>${selectedTours.map(tour => buildTourHtml(group, tour, sanitizeStatus(tour, group.tours[tour.key]?.languageStatus))).join("")}</ul>`;
+      return `<ul>${selectedTours.map(tour => buildTourHtml(group, tour)).join("")}</ul>`;
     }
 
     function buildStatusText(group) {
       const selectedTours = TOUR_DEFINITIONS.filter(tour => group.tours?.[tour.key]?.enabled);
       if (!selectedTours.length) return "[insert status]";
-      return selectedTours.map(tour => buildTourText(group, tour, sanitizeStatus(tour, group.tours[tour.key]?.languageStatus))).join("\n");
+      return selectedTours.map(tour => buildTourText(group, tour)).join("\n");
     }
 
-    function buildTourHtml(group, tour, mode) {
+    function buildTourHtml(group, tour) {
       const data = group.tours[tour.key] || {};
       const day = data.date ? formatDate(data.date) : "DAY";
       const time = tour.key === "supremeCourt" ? "12:30 pm" : (data.time || "TIME");
+      const mode = sanitizeStatus(tour, data.languageStatus);
+      const d = `<strong>${escapeHtml(day)}</strong>`;
+      const t = `<strong>${escapeHtml(time)}</strong>`;
 
-      if (mode === "whiteHouseRsvp") return whiteHouseRsvpHtml(day, time);
-      if (mode === "staffLedCapitol") return staffLedCapitolHtml(day, time);
-      if (mode === "whiteHouseCurrentStatus") return whiteHouseCurrentStatusHtml();
-      if (mode === "whiteHouseMemberPasses") return whiteHouseMemberPassesHtml(day);
-      if (mode === "whiteHouseCancelledReservation") return whiteHouseCancelledReservationHtml();
-      if (mode === "supremeCourtNoReservedSeating") return supremeCourtNoReservedSeatingHtml();
-      if (mode === "supremeCourtGroupLargerThan6") return supremeCourtGroupLargerThan6Html();
-      if (mode === "bepGroup10OrMore") return bepGroup10OrMoreHtml();
-      if (mode === "fbiNeedInformation") return fbiNeedInformationHtml();
+      if (mode === "whiteHouseRsvp") return `<li><strong>White House</strong> - I have submitted a White House tour request for ${d} at ${t} on your behalf. You should have received an email from the White House prompting you to submit information for each person in your group to White House security. This information must exactly match information on your government-issued ID and must be submitted within three days after you receive the email. You will receive confirmation or denial of your tour 14-21 days before the requested date. If you do not RSVP by the deadline, <strong>${escapeHtml(whiteHouseRsvpDeadline.value.trim() || "[DATE AND TIME IN PT IN WHITE HOUSE WEBSITE]")}</strong> you will not be able to get the tour. Your reservation link is below:<ul class="subbullet"><li>${formatMaybeLink(whiteHouseRsvpLink.value.trim() || "INSERT RESERVATION LINK")}</li><li>Please also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.</li></ul></li>`;
+      if (mode === "staffLedCapitol") return `<li><strong>U.S. Capitol Building</strong> - I am happy to say that we have scheduled a staff-led tour for you and your group on ${d} at ${t}.<ul class="subbullet"><li>Day-of instructions: Please meet your tour guide(s) at Cannon 209, Congressman Josh Harder’s office. Allow at least 30 minutes for going through security. Please note that outside food and beverages (including water) are not allowed inside the Capitol Visitors Center. Feel free to drop off any food or beverages you would not like to discard in Cannon 209.</li></ul></li>`;
       if (mode === "pending") return pendingHtml(tour);
       if (mode === "noAvailability") return noAvailabilityHtml(tour);
-      if (mode === "requested") return requestedHtml(tour, day, time);
-      return confirmationHtml(tour, day, time);
+      if (mode === "requested") return requestedHtml(tour, d, t);
+      if (mode === "whiteHouseCurrentStatus") return `<li><strong>White House</strong> – Unfortunately, the White House has cancelled all tours at this time and paused future reservations due to construction in the East Wing. We will let you know if we receive any additional guidance from the White House regarding your tour dates, but as of right now we are unable to book a tour for you.</li>`;
+      if (mode === "whiteHouseMemberPasses") return `<li><strong>White House</strong> – We are happy to let you know that we’re using one of our limited member passes for your visit. Pending the submission of your RSVPs, the White House has scheduled your group for ${d} at <strong>8:00 AM</strong>.<ul class="subbullet"><li>Day-of instructions:</li><li>All confirmed groups must have a “Member Pass” at hand that will be distributed from this office. Groups without this pass will be turned away.</li><li>Please arrange to pick up the Member Pass with the tour coordinator before your tour begins or stop by our office at 209 Cannon Office Building between the hours of 10am to 4pm prior to the tour date.</li><li>Please also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.</li></ul></li>`;
+      if (mode === "whiteHouseCancelledReservation") return `<li><strong>White House</strong> - Unfortunately, the White House did not receive an RSVP from each individual prior to the deadline, which has led to the cancellation of your tour request. Please let us know if you would like us to resubmit for a White House tour [PLEASE CHECK THAT THEY ARE STILL AVAILABLE BEFORE OFFERING TO RESUBMIT] or if there are any additional tour requests we can submit for you!</li>`;
+      if (mode === "supremeCourtNoReservedSeating") return `<li><strong>Supreme Court Lecture</strong> - Unfortunately the Supreme Court is not offering reserved seating available on the days you will be in Washington. However, they may still be holding lectures on a walk-in basis only. Please visit the Supreme Court website to see their calendar and anticipated tour slots.</li>`;
+      if (mode === "supremeCourtGroupLargerThan6") return `<li><strong>Supreme Court Lecture</strong> - Unfortunately the Supreme Court does not allow reserved seating for groups of more than 6. They do allow large groups to walk-in to attend lectures, please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.</li>`;
+      if (mode === "bepGroup10OrMore") return `<li><strong>Bureau of Engraving and Printing</strong> - The Bureau of Engraving and Printings does not allow congressional staff to book tours for constituent groups of 10 or more, but it does allow constituents to do so themselves. Please see the attached form, complete it, and email the completed form to tourscheduler@bep.gov. Please note that the BEP also allows walk-in tours Monday through Friday. You can find more information on their website.</li>`;
+      if (mode === "fbiNeedInformation") return `<li><strong>FBI</strong> – Due to FBI security, we are unable to request a tour if we do not have the information listed below for each member of your party. As of today, the FBI has the dates you’ve requested open for reservations, but FBI tours are very limited and fill up quickly.<ul class="subbullet"><li>To ensure that we are able to submit your request, please collect the following information from each member of your group.</li><li>First Name</li><li>Middle Name</li><li>Last NameSuffix (If Applicable)</li><li>Birthdate</li><li>Social Security Number (not required for guests under 16 years of age)</li><li>Country of Birth</li><li>Citizenship</li><li>Green Card Number (If Applicable)</li><li>Passport or Visa (If Applicable)</li></ul></li>`;
+      return confirmationHtml(tour, d, t);
     }
 
-    function buildTourText(group, tour, mode) {
+    function buildTourText(group, tour) {
       const data = group.tours[tour.key] || {};
       const day = data.date ? formatDate(data.date) : "DAY";
       const time = tour.key === "supremeCourt" ? "12:30 pm" : (data.time || "TIME");
+      const mode = sanitizeStatus(tour, data.languageStatus);
+      const deadline = whiteHouseRsvpDeadline.value.trim() || "[DATE AND TIME IN PT IN WHITE HOUSE WEBSITE]";
+      const link = whiteHouseRsvpLink.value.trim() || "INSERT RESERVATION LINK";
 
-      if (mode === "whiteHouseRsvp") return whiteHouseRsvpText(day, time);
-      if (mode === "staffLedCapitol") return staffLedCapitolText(day, time);
-      if (mode === "whiteHouseCurrentStatus") return whiteHouseCurrentStatusText();
-      if (mode === "whiteHouseMemberPasses") return whiteHouseMemberPassesText(day);
-      if (mode === "whiteHouseCancelledReservation") return whiteHouseCancelledReservationText();
-      if (mode === "supremeCourtNoReservedSeating") return supremeCourtNoReservedSeatingText();
-      if (mode === "supremeCourtGroupLargerThan6") return supremeCourtGroupLargerThan6Text();
-      if (mode === "bepGroup10OrMore") return bepGroup10OrMoreText();
-      if (mode === "fbiNeedInformation") return fbiNeedInformationText();
+      if (mode === "whiteHouseRsvp") return `• White House - I have submitted a White House tour request for ${day} at ${time} on your behalf. You should have received an email from the White House prompting you to submit information for each person in your group to White House security. This information must exactly match information on your government-issued ID and must be submitted within three days after you receive the email. You will receive confirmation or denial of your tour 14-21 days before the requested date. If you do not RSVP by the deadline, ${deadline} you will not be able to get the tour. Your reservation link is below:\n  ○ ${link}\n  ○ Please also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.`;
+      if (mode === "staffLedCapitol") return `• U.S. Capitol Building - I am happy to say that we have scheduled a staff-led tour for you and your group on ${day} at ${time}.\n  ○ Day-of instructions: Please meet your tour guide(s) at Cannon 209, Congressman Josh Harder’s office. Allow at least 30 minutes for going through security. Please note that outside food and beverages (including water) are not allowed inside the Capitol Visitors Center. Feel free to drop off any food or beverages you would not like to discard in Cannon 209.`;
       if (mode === "pending") return pendingText(tour);
       if (mode === "noAvailability") return noAvailabilityText(tour);
       if (mode === "requested") return requestedText(tour, day, time);
+      if (mode === "whiteHouseCurrentStatus") return `• White House – Unfortunately, the White House has cancelled all tours at this time and paused future reservations due to construction in the East Wing. We will let you know if we receive any additional guidance from the White House regarding your tour dates, but as of right now we are unable to book a tour for you.`;
+      if (mode === "whiteHouseMemberPasses") return `• White House – We are happy to let you know that we’re using one of our limited member passes for your visit. Pending the submission of your RSVPs, the White House has scheduled your group for ${day} at 8:00 AM.\n  ○ Day-of instructions:\n    § All confirmed groups must have a “Member Pass” at hand that will be distributed from this office. Groups without this pass will be turned away.\n    § Please arrange to pick up the Member Pass with the tour coordinator before your tour begins or stop by our office at 209 Cannon Office Building between the hours of 10am to 4pm prior to the tour date.\n    § Please also note that the White House requires all guests over the age of 15 to present a REAL ID or valid passport when they arrive for their tour.`;
+      if (mode === "whiteHouseCancelledReservation") return `• White House - Unfortunately, the White House did not receive an RSVP from each individual prior to the deadline, which has led to the cancellation of your tour request. Please let us know if you would like us to resubmit for a White House tour [PLEASE CHECK THAT THEY ARE STILL AVAILABLE BEFORE OFFERING TO RESUBMIT] or if there are any additional tour requests we can submit for you!`;
+      if (mode === "supremeCourtNoReservedSeating") return `• Supreme Court Lecture - Unfortunately the Supreme Court is not offering reserved seating available on the days you will be in Washington. However, they may still be holding lectures on a walk-in basis only. Please visit the Supreme Court website to see their calendar and anticipated tour slots.`;
+      if (mode === "supremeCourtGroupLargerThan6") return `• Supreme Court Lecture - Unfortunately the Supreme Court does not allow reserved seating for groups of more than 6. They do allow large groups to walk-in to attend lectures, please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.`;
+      if (mode === "bepGroup10OrMore") return `• Bureau of Engraving and Printing - The Bureau of Engraving and Printings does not allow congressional staff to book tours for constituent groups of 10 or more, but it does allow constituents to do so themselves. Please see the attached form, complete it, and email the completed form to tourscheduler@bep.gov. Please note that the BEP also allows walk-in tours Monday through Friday. You can find more information on their website.`;
+      if (mode === "fbiNeedInformation") return `• FBI – Due to FBI security, we are unable to request a tour if we do not have the information listed below for each member of your party. As of today, the FBI has the dates you’ve requested open for reservations, but FBI tours are very limited and fill up quickly.\n  ○ To ensure that we are able to submit your request, please collect the following information from each member of your group.\n    ■ First Name\n    ■ Middle Name\n    ■ Last NameSuffix (If Applicable)\n    ■ Birthdate\n    ■ Social Security Number (not required for guests under 16 years of age)\n    ■ Country of Birth\n    ■ Citizenship\n    ■ Green Card Number (If Applicable)\n    ■ Passport or Visa (If Applicable)`;
       return confirmationText(tour, day, time);
     }
 
-    function confirmationHtml(tour, day, time) {
-      const dayStrong = `<strong>${escapeHtml(day)}</strong>`;
-      const timeStrong = `<strong>${escapeHtml(time)}</strong>`;
+    function confirmationHtml(tour, dayStrong, timeStrong) {
       if (tour.key === "whiteHouse") return `<li><strong>White House</strong> - The White House has scheduled your group for ${dayStrong} at ${timeStrong}. You should have already received a confirmation email with your pass directly from the White House.<ul class="subbullet"><li>Day-of instructions: All visitors over the age of 18 and all non-US citizens regardless of age must bring a REAL ID or valid passport. Please check your receipt for further instructions.</li></ul></li>`;
       if (tour.key === "capitol") return `<li><strong>U.S. Capitol Building</strong> - You should have already received a confirmation email directly from the Capitol Visitor Center for a tour on ${dayStrong} at ${timeStrong}. Your receipt is attached here.<ul class="subbullet"><li>Day-of instructions: Enter for your tour in the Capitol Visitors Center, found beneath the east plaza of the Capitol. Make sure to have the confirmation number on your email receipt handy, and allow at least 30 minutes for going through security. Outside food and beverages (including water) are not allowed inside the Capitol Visitors Center.</li></ul></li>`;
-      if (tour.key === "loc") return `<li><strong>Library of Congress</strong> - You should have already received a confirmation email directly from the Library of Congress for a timed entry pass on ${dayStrong} at ${timeStrong}.<ul class="subbullet"><li>Day-of instructions: Make sure to have the confirmation number on your email receipt handy, and allow at least 15 minutes for going through security.</li></
+      if (tour.key === "loc") return `<li><strong>Library of Congress</strong> - You should have already received a confirmation email directly from the Library of Congress for a timed entry pass on ${dayStrong} at ${timeStrong}.<ul class="subbullet"><li>Day-of instructions: Make sure to have the confirmation number on your email receipt handy, and allow at least 15 minutes for going through security.</li></ul></li>`;
+      if (tour.key === "supremeCourt") return `<li><strong>Supreme Court Lecture</strong> - I am happy to say that we have scheduled reserved seating for your group on ${dayStrong} at <strong>12:30 pm</strong>. The reservation will be under your name.<ul class="subbullet"><li>Day-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 15 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.</li></ul></li>`;
+      if (tour.key === "bep") return `<li><strong>Bureau of Engraving and Printing (BEP)</strong> - The BEP has scheduled your group for ${dayStrong} at ${timeStrong}. You should have received a ticket from "eTix" (confirmation@etix.com) which you will use for entry into the BEP.<ul class="subbullet"><li>Day-of instructions: Make sure to have the confirmation number on your email receipt handy, and make sure to arrive early - the BEP does not accommodate groups that are more than 10 minutes late. The Tour and Visitor Center is near the National Mall, just south of Independence Avenue, SW, between 14th Street and Raoul Wallenberg Place (15th Street) in Washington, D.C. Visitors enter through the Tour and Visitor Center entrance on 14th Street.</li></ul></li>`;
+      return requestedHtml(tour, dayStrong, timeStrong);
+    }
+
+    function confirmationText(tour, day, time) {
+      if (tour.key === "whiteHouse") return `• White House - The White House has scheduled your group for ${day} at ${time}. You should have already received a confirmation email with your pass directly from the White House.\n  ○ Day-of instructions: All visitors over the age of 18 and all non-US citizens regardless of age must bring a REAL ID or valid passport. Please check your receipt for further instructions.`;
+      if (tour.key === "capitol") return `• U.S. Capitol Building - You should have already received a confirmation email directly from the Capitol Visitor Center for a tour on ${day} at ${time}. Your receipt is attached here.\n  ○ Day-of instructions: Enter for your tour in the Capitol Visitors Center, found beneath the east plaza of the Capitol. Make sure to have the confirmation number on your email receipt handy, and allow at least 30 minutes for going through security. Outside food and beverages (including water) are not allowed inside the Capitol Visitors Center.`;
+      if (tour.key === "loc") return `• Library of Congress - You should have already received a confirmation email directly from the Library of Congress for a timed entry pass on ${day} at ${time}.\n  ○ Day-of instructions: Make sure to have the confirmation number on your email receipt handy, and allow at least 15 minutes for going through security.`;
+      if (tour.key === "supremeCourt") return `• Supreme Court Lecture - I am happy to say that we have scheduled reserved seating for your group on ${day} at 12:30 pm. The reservation will be under your name.\n  ○ Day-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 15 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.`;
+      if (tour.key === "bep") return `• Bureau of Engraving and Printing (BEP) - The BEP has scheduled your group for ${day} at ${time}. You should have received a ticket from "eTix" (confirmation@etix.com) which you will use for entry into the BEP.\n  ○ Day-of instructions: Make sure to have the confirmation number on your email receipt handy, and make sure to arrive early - the BEP does not accommodate groups that are more than 10 minutes late. The Tour and Visitor Center is near the National Mall, just south of Independence Avenue, SW, between 14th Street and Raoul Wallenberg Place (15th Street) in Washington, D.C. Visitors enter through the Tour and Visitor Center entrance on 14th Street.`;
+      return requestedText(tour, day, time);
+    }
+
+    function pendingHtml(tour) {
+      if (tour.key === "whiteHouse") return `<li><strong>White House</strong> – We have received your request and will reserve your tour as soon as the White House opens up the dates you’ve requested for reservations.</li>`;
+      if (tour.key === "loc") return `<li><strong>Library of Congress</strong> – We have received your request and will reserve your timed entry pass as soon as the Library opens up the dates you’ve requested for reservations.</li>`;
+      if (tour.key === "supremeCourt") return `<li><strong>Supreme Court Lecture</strong> – We have received your request and will reserve your tour as soon as the Supreme Court opens up the dates you’ve requested for reservations.</li>`;
+      if (tour.key === "bep") return `<li><strong>Bureau of Engraving and Printing</strong> – We have received your request and will reserve your tour as soon as the Bureau of Engraving and Printing opens the dates you’ve requested for reservations.</li>`;
+      return requestedHtml(tour, "DAY", "TIME");
+    }
+
+    function pendingText(tour) {
+      if (tour.key === "whiteHouse") return `• White House – We have received your request and will reserve your tour as soon as the White House opens up the dates you’ve requested for reservations.`;
+      if (tour.key === "loc") return `• Library of Congress – We have received your request and will reserve your timed entry pass as soon as the Library opens up the dates you’ve requested for reservations.`;
+      if (tour.key === "supremeCourt") return `• Supreme Court Lecture – We have received your request and will reserve your tour as soon as the Supreme Court opens up the dates you’ve requested for reservations.`;
+      if (tour.key === "bep") return `• Bureau of Engraving and Printing – We have received your request and will reserve your tour as soon as the Bureau of Engraving and Printing opens the dates you’ve requested for reservations.`;
+      return requestedText(tour, "DAY", "TIME");
+    }
+
+    function noAvailabilityHtml(tour) {
+      if (tour.key === "whiteHouse") return `<li><strong>White House</strong> – Unfortunately, the White House has no available tour spots during the dates you provided. Please let us know if there are any other tour requests we can submit for you!</li>`;
+      if (tour.key === "capitol") return `<li><strong>U.S. Capitol Building</strong> - The Capitol Visitor Center was fully booked for advanced passes during your visit. There are a limited number of same day walk-up tickets, and we strongly advise that you arrive early and be prepared to wait if you would like to pursue that option. Please let us know if there are any other tour requests we can submit for you!</li>`;
+      if (tour.key === "loc") return `<li><strong>Library of Congress</strong> - Unfortunately there are no more reserved spaces available during the days and times you requested. Walk-in timed entry passes of the Library of Congress are available on a first-come, first-served basis without prior reservations; you can find more information about walk-ins on their website.</li>`;
+      if (tour.key === "supremeCourt") return `<li><strong>Supreme Court Lecture</strong> - Unfortunately the Supreme Court had no availability for reserved lecture seating for the dates you provided. Please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.<ul class="subbullet"><li>Day-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 30 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.</li></ul></li>`;
+      if (tour.key === "bep") return `<li><strong>Bureau of Engraving and Printing (BEP)</strong> – Unfortunately, the Bureau of Engraving and Printing has no spaces available for your requested dates and times. The BEP allows walk-in tours Monday through Friday. You can find more information on their website.</li>`;
+      return `<li><strong>FBI</strong> - Unfortunately, the FBI has no more available tour spots during your trip to DC. If there’s anything else we can do to make your trip to Washington great, please let us know!</li>`;
+    }
+
+    function noAvailabilityText(tour) {
+      if (tour.key === "whiteHouse") return `• White House – Unfortunately, the White House has no available tour spots during the dates you provided. Please let us know if there are any other tour requests we can submit for you!`;
+      if (tour.key === "capitol") return `• U.S. Capitol Building - The Capitol Visitor Center was fully booked for advanced passes during your visit. There are a limited number of same day walk-up tickets, and we strongly advise that you arrive early and be prepared to wait if you would like to pursue that option. Please let us know if there are any other tour requests we can submit for you!`;
+      if (tour.key === "loc") return `• Library of Congress - Unfortunately there are no more reserved spaces available during the days and times you requested. Walk-in timed entry passes of the Library of Congress are available on a first-come, first-served basis without prior reservations; you can find more information about walk-ins on their website.`;
+      if (tour.key === "supremeCourt") return `• Supreme Court Lecture - Unfortunately the Supreme Court had no availability for reserved lecture seating for the dates you provided. Please visit the Supreme Court website to see their calendar and anticipated tour slots for non-reserved seating on a first-come, first-served basis.\n  ○ Day-of instructions: A line forms in the Great Hall on the first floor before each lecture. It is advisable to join the line at least 30 minutes prior to the lecture’s start time. Please be on time for the lectures, as the Supreme Court does not accommodate late entries.`;
+      if (tour.key === "bep") return `• Bureau of Engraving and Printing (BEP) – Unfortunately, the Bureau of Engraving and Printing has no spaces available for your requested dates and times. The BEP allows walk-in tours Monday through Friday. You can find more information on their website.`;
+      return `• FBI - Unfortunately, the FBI has no more available tour spots during your trip to DC. If there’s anything else we can do to make your trip to Washington great, please let us know!`;
+    }
+
+    function requestedHtml(tour, dayStrong, timeStrong) {
+      if (tour.key === "bep") return `<li><strong>Bureau of Engraving and Printing (BEP)</strong> – We have submitted your tour request to the BEP! We’ll update you as soon as we hear back from the BEP.</li>`;
+      if (tour.key === "fbi") return `<li><strong>FBI</strong> – Your tour for the FBI has been requested for ${dayStrong} at ${timeStrong}. You will receive email from the FBI stating whether your group has been approved for the tour three days prior to your scheduled visit.</li>`;
+      return pendingHtml(tour);
+    }
+
+    function requestedText(tour, day, time) {
+      if (tour.key === "bep") return `• Bureau of Engraving and Printing (BEP) – We have submitted your tour request to the BEP! We’ll update you as soon as we hear back from the BEP.`;
+      if (tour.key === "fbi") return `• FBI – Your tour for the FBI has been requested for ${day} at ${time}. You will receive email from the FBI stating whether your group has been approved for the tour three days prior to your scheduled visit.`;
+      return pendingText(tour);
+    }
+
+    async function copyEmail() {
+      if (!latestPlainTextEmail) generateEmail();
+      if (!latestPlainTextEmail) return;
+      try {
+        await navigator.clipboard.writeText(latestPlainTextEmail);
+        setStorageStatus("Email copied");
+      } catch {
+        const temp = document.createElement("textarea");
+        temp.value = latestPlainTextEmail;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        temp.remove();
+        setStorageStatus("Email copied");
+      }
+    }
+
+    function downloadBackup() {
+      const blob = new Blob([JSON.stringify(groups, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `tour-tracker-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function importBackup(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(reader.result);
+          if (!Array.isArray(parsed)) throw new Error("Invalid backup");
+          groups = parsed.map(normalizeGroup);
+          persistGroups();
+          renderSavedGroups();
+          renderEmailGroupOptions();
+          updateWhiteHouseExtrasVisibility();
+          setStorageStatus("Backup imported");
+        } catch {
+          alert("This backup file could not be imported.");
+        } finally {
+          event.target.value = "";
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function loadGroups() {
+      for (const key of [STORAGE_KEY, "tourTrackerGroupsV2", "tourTrackerGroupsV1"]) {
+        try {
+          const stored = JSON.parse(localStorage.getItem(key));
+          if (Array.isArray(stored)) return stored.map(normalizeGroup);
+        } catch {}
+      }
+      return [];
+    }
+
+    function normalizeGroup(group) {
+      const tours = {};
+      TOUR_DEFINITIONS.forEach(tour => {
+        const data = group?.tours?.[tour.key];
+        if (!data?.enabled) return;
+        tours[tour.key] = {
+          enabled: true,
+          date: data.date || "",
+          time: data.time || (tour.needsTime ? tour.defaultTime : tour.fixedTime),
+          languageStatus: sanitizeStatus(tour, data.languageStatus)
+        };
+      });
+      return {
+        id: group?.id || makeId(),
+        groupName: group?.groupName || "Untitled Group",
+        recipientName: group?.recipientName || "",
+        coordinatorName: group?.coordinatorName || "",
+        officeName: group?.officeName || "Office of Rep. Harder",
+        tours,
+        updatedAt: group?.updatedAt || new Date().toISOString()
+      };
+    }
+
+    function persistGroups() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(groups));
+    }
+
+    function updateWhiteHouseExtrasVisibility() {
+      const group = groups.find(item => item.id === emailGroupSelect.value);
+      const whiteHouse = TOUR_DEFINITIONS.find(tour => tour.key === "whiteHouse");
+      const show = Boolean(group?.tours?.whiteHouse?.enabled && sanitizeStatus(whiteHouse, group.tours.whiteHouse.languageStatus) === "whiteHouseRsvp");
+      whiteHouseExtras.classList.toggle("hidden", !show);
+    }
+
+    function sanitizeStatus(tour, status) {
+      return tour.allowedStatuses.includes(status) ? status : tour.allowedStatuses[0];
+    }
+
+    function setStorageStatus(message) {
+      const el = document.getElementById("storageStatus");
+      el.textContent = message;
+      setTimeout(() => { el.textContent = "Local storage ready"; }, 2200);
+    }
+
+    function makeTimeOptions(startLabel, endLabel, incrementMinutes) {
+      const start = parseTime(startLabel);
+      const end = parseTime(endLabel);
+      const options = [];
+      for (let minutes = start; minutes <= end; minutes += incrementMinutes) options.push(formatMinutes(minutes));
+      return options;
+    }
+
+    function parseTime(label) {
+      const match = label.match(/^(\d{1,2}):(\d{2})\s?(AM|PM)$/i);
+      if (!match) return 0;
+      let hours = Number(match[1]);
+      const minutes = Number(match[2]);
+      const period = match[3].toUpperCase();
+      if (period === "PM" && hours !== 12) hours += 12;
+      if (period === "AM" && hours === 12) hours = 0;
+      return hours * 60 + minutes;
+    }
+
+    function formatMinutes(totalMinutes) {
+      const hours24 = Math.floor(totalMinutes / 60);
+      const minutes = totalMinutes % 60;
+      const period = hours24 >= 12 ? "PM" : "AM";
+      let hours12 = hours24 % 12;
+      if (hours12 === 0) hours12 = 12;
+      return `${hours12}:${String(minutes).padStart(2, "0")} ${period}`;
+    }
+
+    function formatDate(value) {
+      if (!value) return "DAY";
+      const [year, month, day] = value.split("-").map(Number);
+      return new Date(year, month - 1, day).toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+    }
+
+    function formatDateTime(value) {
+      if (!value) return "";
+      return new Date(value).toLocaleString(undefined, { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" });
+    }
+
+    function formatMaybeLink(value) {
+      const safe = escapeHtml(value);
+      if (/^https?:\/\//i.test(value)) return `<a href="${safe}" target="_blank" rel="noopener">${safe}</a>`;
+      return safe;
+    }
+
+    function makeId() {
+      if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+      return `group-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    }
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
