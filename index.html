@@ -846,21 +846,71 @@
     }
 
     async function copyEmail() {
-      if (!latestPlainTextEmail) generateEmail();
-      if (!latestPlainTextEmail) return;
-      try {
-        await navigator.clipboard.writeText(latestPlainTextEmail);
-        setStorageStatus("Email copied");
-      } catch {
-        const temp = document.createElement("textarea");
-        temp.value = latestPlainTextEmail;
-        document.body.appendChild(temp);
-        temp.select();
-        document.execCommand("copy");
-        temp.remove();
-        setStorageStatus("Email copied");
-      }
+  if (!emailPreview.innerHTML || emailPreview.textContent.includes("Choose a group")) {
+    generateEmail();
+  }
+
+  if (!emailPreview.innerHTML || emailPreview.textContent.includes("Save or select a group")) {
+    return;
+  }
+
+  const htmlForClipboard = `
+    <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; color: #000000;">
+      ${emailPreview.innerHTML}
+    </div>
+  `;
+
+  const plainForClipboard = emailPreview.innerText;
+
+  try {
+    if (navigator.clipboard && window.ClipboardItem) {
+      await navigator.clipboard.write([
+        new ClipboardItem({
+          "text/html": new Blob([htmlForClipboard], { type: "text/html" }),
+          "text/plain": new Blob([plainForClipboard], { type: "text/plain" })
+        })
+      ]);
+
+      setStorageStatus("Formatted email copied");
+      return;
     }
+  } catch {}
+
+  const temp = document.createElement("div");
+  temp.setAttribute("contenteditable", "true");
+  temp.style.position = "fixed";
+  temp.style.left = "-9999px";
+  temp.style.top = "0";
+  temp.style.fontFamily = "Arial, sans-serif";
+  temp.style.fontSize = "14px";
+  temp.style.lineHeight = "1.5";
+  temp.style.color = "#000000";
+  temp.innerHTML = emailPreview.innerHTML;
+  document.body.appendChild(temp);
+
+  const range = document.createRange();
+  range.selectNodeContents(temp);
+
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  try {
+    document.execCommand("copy");
+    setStorageStatus("Formatted email copied");
+  } catch {
+    const plain = document.createElement("textarea");
+    plain.value = plainForClipboard;
+    document.body.appendChild(plain);
+    plain.select();
+    document.execCommand("copy");
+    plain.remove();
+    setStorageStatus("Plain text copied");
+  }
+
+  selection.removeAllRanges();
+  temp.remove();
+}
 
     function downloadBackup() {
       const blob = new Blob([JSON.stringify(groups, null, 2)], { type: "application/json" });
